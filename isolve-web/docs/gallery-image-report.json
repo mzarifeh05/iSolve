@@ -1,0 +1,209 @@
+{
+  "unique_photos": 16,
+  "thumbnail_widths": [
+    320,
+    640,
+    960
+  ],
+  "thumbnail_webp_bytes": {
+    "min": 4964,
+    "max": 138390,
+    "total": 1726490
+  },
+  "lightbox_webp_bytes": [
+    {
+      "slug": "teamwork-in-the-lab",
+      "width": 1620,
+      "height": 1080,
+      "bytes": 83910
+    },
+    {
+      "slug": "learning-session-group",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 173488
+    },
+    {
+      "slug": "following-along",
+      "width": 1080,
+      "height": 810,
+      "bytes": 175598
+    },
+    {
+      "slug": "zcc-community",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 322032
+    },
+    {
+      "slug": "zcc-team-problems",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 137676
+    },
+    {
+      "slug": "zcc-first-place",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 110704
+    },
+    {
+      "slug": "zcc-second-place",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 111896
+    },
+    {
+      "slug": "zcc-third-place",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 109002
+    },
+    {
+      "slug": "session-audience",
+      "width": 1620,
+      "height": 1080,
+      "bytes": 158612
+    },
+    {
+      "slug": "zcc-organizer-support",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 105122
+    },
+    {
+      "slug": "zcc-friendly-moment",
+      "width": 1280,
+      "height": 1920,
+      "bytes": 131084
+    },
+    {
+      "slug": "zcc-participant-photo",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 198634
+    },
+    {
+      "slug": "previous-edition-recognition-a",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 155588
+    },
+    {
+      "slug": "previous-edition-recognition-b",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 129018
+    },
+    {
+      "slug": "previous-edition-recognition-c",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 112056
+    },
+    {
+      "slug": "isolve-stickers",
+      "width": 1620,
+      "height": 1080,
+      "bytes": 39648
+    }
+  ],
+  "source_mapping": [
+    {
+      "source": "teams solving together.JPG",
+      "id": "de91f7d2-fbb8-5c0d-af49-a000f54e694e",
+      "content_hash": "de91f7d2fbb8dc0d4f49a000f54e694e715100f8d2c30c13a046477a9d6ac927",
+      "slug": "teamwork-in-the-lab"
+    },
+    {
+      "source": "session group pic.JPG",
+      "id": "8e240abe-1bc1-5bc0-acc5-3cb17821bb39",
+      "content_hash": "8e240abe1bc1fbc06cc53cb17821bb39fb3d22d2e4202d546e16fde236ee8d7a",
+      "slug": "learning-session-group"
+    },
+    {
+      "source": "during session.jpeg",
+      "id": "af9e488e-892e-57d1-a493-2632b9e2525a",
+      "content_hash": "af9e488e892e27d1a4932632b9e2525a3b0934fe8b0f37cd6f12449f73436378",
+      "slug": "following-along"
+    },
+    {
+      "source": "group picture from zcc.JPG",
+      "id": "781f33d4-b8fb-57d6-a061-9c0cc244aec7",
+      "content_hash": "781f33d4b8fbe7d6e0619c0cc244aec71c1b6c4d94c2ede49e0750ecf1be583f",
+      "slug": "zcc-community"
+    },
+    {
+      "source": "teams solving in zcc.JPG",
+      "id": "de282ecc-1685-5fc5-a8c0-e722feec92e4",
+      "content_hash": "de282ecc1685dfc578c0e722feec92e4a03d3f11d430f83fb7c70684f00f7432",
+      "slug": "zcc-team-problems"
+    },
+    {
+      "source": "winners in zcc 1st.JPG",
+      "id": "1a637b38-c29d-5209-a7d3-c87f890e08d4",
+      "content_hash": "1a637b38c29de20957d3c87f890e08d47e6e78de6c81c98a9c7c54dbaa80bee0",
+      "slug": "zcc-first-place"
+    },
+    {
+      "source": "winners in zcc 2nd.JPG",
+      "id": "d43bfe66-390d-5185-a4d7-4fce071956c0",
+      "content_hash": "d43bfe66390da18534d74fce071956c04e3272462f3eb4d35840d76d325866c0",
+      "slug": "zcc-second-place"
+    },
+    {
+      "source": "winners in zcc 3rd.JPG",
+      "id": "6f4fbe48-bb22-588a-a0c3-62b0ecf7e64d",
+      "content_hash": "6f4fbe48bb22488a20c362b0ecf7e64d640875804b5c1810df2d23c188026e40",
+      "slug": "zcc-third-place"
+    },
+    {
+      "source": "during session.JPG",
+      "id": "5da0765d-bb1a-57ff-aa96-39a73ce323f2",
+      "content_hash": "5da0765dbb1a17ff5a9639a73ce323f29c32b5da44a6172b2d846e9904fd96c9",
+      "slug": "session-audience"
+    },
+    {
+      "source": "orgnizer of iSolve checking participants in zcc.JPG",
+      "id": "a1b1793d-0c68-5e8f-a99a-82fda9370666",
+      "content_hash": "a1b1793d0c684e8f599a82fda9370666298e369ba87b7b4db2faefe8da52464e",
+      "slug": "zcc-organizer-support"
+    },
+    {
+      "source": "happy paritcipant in zcc.JPG",
+      "id": "81b00aac-ee62-5065-a78c-ef5c3006dfa9",
+      "content_hash": "81b00aacee624065578cef5c3006dfa96c706865498fcbf5e98f657977895d33",
+      "slug": "zcc-friendly-moment"
+    },
+    {
+      "source": "participatns in zcc.JPG",
+      "id": "b6cb6cbe-076c-5070-a7e2-77c02f1cb40c",
+      "content_hash": "b6cb6cbe076c707077e277c02f1cb40cc081eb340985865df37a69edb076e9e1",
+      "slug": "zcc-participant-photo"
+    },
+    {
+      "source": "most solved in past version.JPG",
+      "id": "e3c2f083-5860-524d-a35b-5cf93eca0aaf",
+      "content_hash": "e3c2f0835860624d635b5cf93eca0aaf17f9d4db8b2b3609c6e1e8d4eac7e38a",
+      "slug": "previous-edition-recognition-a"
+    },
+    {
+      "source": "most solved in past version (2).JPG",
+      "id": "81935f34-fd8d-534e-ad30-9a5660d6eb62",
+      "content_hash": "81935f34fd8d634efd309a5660d6eb62d0d881e7c5e0254342ea6b8f05ca6bdb",
+      "slug": "previous-edition-recognition-b"
+    },
+    {
+      "source": "most solved in past version (3).JPG",
+      "id": "ca830f60-ad0d-517c-a9ee-5a468ab9a564",
+      "content_hash": "ca830f60ad0d817ce9ee5a468ab9a564218c24d347bbe83051963260dc22714a",
+      "slug": "previous-edition-recognition-c"
+    },
+    {
+      "source": "club sticker image.JPG",
+      "id": "f7a1a982-9579-5130-acd2-7cdf21c350d8",
+      "content_hash": "f7a1a9829579d1300cd27cdf21c350d8e9917a6eaf51cd595aae2a8aa75fb0ba",
+      "slug": "isolve-stickers"
+    }
+  ]
+}
