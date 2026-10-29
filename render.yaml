@@ -1,0 +1,13 @@
+# Optional: use New > Blueprint to apply these settings automatically.
+# For New > Static Site, copy the same build/publish settings and rewrite.
+services:
+  - type: web
+    name: isolve-coding-club
+    runtime: static
+    branch: main
+    buildCommand: npm ci --include=dev && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
