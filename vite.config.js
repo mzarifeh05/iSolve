@@ -8,7 +8,8 @@ export default defineConfig(({mode})=>{
   const liveConfigured=Boolean(environment.VITE_SUPABASE_URL?.trim()||environment.VITE_SUPABASE_PUBLISHABLE_KEY?.trim());
   
   return {
-    base: '/iSolve/',
+    // Render and local preview serve the application from the domain root.
+    base: '/',
     plugins: [react(),{
       name:'private-gallery-storage',apply:'build',
       closeBundle(){
