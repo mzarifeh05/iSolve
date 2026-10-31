@@ -1,32 +1,36 @@
-# Gallery preparation report
+# Gallery assets and measured sizes
 
-16 unique real photos; the sticker is referenced once. The duplicate sticker copy mentioned in the brief is excluded from the catalog; that extra copy was not present in the supplied directory. The two during-session files are distinct and both included. All dates remain unset.
+There are 20 distinct supplied real photos, with WebP and JPEG versions of three thumbnails plus one full-view image each: 160 prepared files. Source photos are unchanged and remain outside the repository.
 
-Each photo has 320/640/960-width WebP and JPEG thumbnails, and a WebP/JPEG full-composition image capped at a 1920-pixel longest edge. No output upscales. EXIF orientation is applied; metadata is stripped. All grid defaults use contain to preserve groups, recipients, and the portrait.
+Total prepared image bytes: 11,014,488 (10.50 MiB). The browser does not download this entire collection on page load. Category metadata is paginated in batches of six, responsive thumbnails load lazily, and full images load only when opened.
 
-WebP thumbnails: 4.8–135.1 KiB each; total 1686.0 KiB across all 48 variants. Full WebP images: 38.7–314.5 KiB. All 128 prepared WebP/JPEG files total about 8.85 MiB.
+| Photo | 320 WebP | 640 WebP | 960 WebP | Full WebP | Full dimensions | Full JPEG |
+| --- | --- | --- | --- | --- | --- | --- |
+| teamwork-in-the-lab | 10.8 KiB | 26.9 KiB | 42.9 KiB | 81.9 KiB | 1620 × 1080 | 130.6 KiB |
+| learning-session-group | 12.2 KiB | 33.2 KiB | 60.8 KiB | 169.4 KiB | 1920 × 1280 | 235.9 KiB |
+| following-along | 21.5 KiB | 68.0 KiB | 135.1 KiB | 171.5 KiB | 1080 × 810 | 175.9 KiB |
+| zcc-community | 16.5 KiB | 49.0 KiB | 99.9 KiB | 314.5 KiB | 1920 × 1280 | 376.1 KiB |
+| zcc-team-problems | 13.3 KiB | 32.1 KiB | 55.8 KiB | 134.4 KiB | 1920 × 1280 | 202.6 KiB |
+| zcc-first-place | 9.9 KiB | 24.0 KiB | 43.0 KiB | 108.1 KiB | 1920 × 1280 | 167.0 KiB |
+| zcc-second-place | 10.4 KiB | 26.2 KiB | 45.3 KiB | 109.3 KiB | 1920 × 1280 | 171.3 KiB |
+| zcc-third-place | 10.2 KiB | 24.5 KiB | 43.0 KiB | 106.4 KiB | 1920 × 1280 | 163.1 KiB |
+| session-audience | 14.3 KiB | 43.8 KiB | 75.7 KiB | 154.9 KiB | 1620 × 1080 | 199.5 KiB |
+| zcc-organizer-support | 10.4 KiB | 24.5 KiB | 39.5 KiB | 102.7 KiB | 1920 × 1280 | 166.4 KiB |
+| zcc-friendly-moment | 15.5 KiB | 42.1 KiB | 84.6 KiB | 128.0 KiB | 1280 × 1920 | 177.0 KiB |
+| zcc-participant-photo | 13.4 KiB | 38.3 KiB | 67.0 KiB | 194.0 KiB | 1920 × 1280 | 260.0 KiB |
+| previous-edition-recognition-a | 11.9 KiB | 30.8 KiB | 56.7 KiB | 151.9 KiB | 1920 × 1280 | 215.6 KiB |
+| previous-edition-recognition-b | 11.2 KiB | 29.0 KiB | 50.5 KiB | 126.0 KiB | 1920 × 1280 | 191.9 KiB |
+| previous-edition-recognition-c | 9.8 KiB | 24.7 KiB | 42.1 KiB | 109.4 KiB | 1920 × 1280 | 165.7 KiB |
+| isolve-stickers | 4.8 KiB | 11.9 KiB | 19.1 KiB | 38.7 KiB | 1620 × 1080 | 73.4 KiB |
+| zcc-before-the-start | 12.8 KiB | 34.5 KiB | 58.6 KiB | 157.4 KiB | 1920 × 1280 | 228.9 KiB |
+| zcc-solving-side-by-side | 6.6 KiB | 13.9 KiB | 22.1 KiB | 52.2 KiB | 1920 × 1280 | 92.1 KiB |
+| zcc-working-through-ideas | 10.5 KiB | 24.9 KiB | 43.5 KiB | 63.7 KiB | 1280 × 1920 | 110.0 KiB |
+| zcc-thinking-together | 10.6 KiB | 24.4 KiB | 40.6 KiB | 94.7 KiB | 1920 × 1280 | 151.4 KiB |
 
-| Photo | Thumbnail WebP KiB (320 / 640 / 960) | Full dimensions | Full WebP KiB | Full JPEG KiB |
-|---|---|---|---|---|
-| teamwork-in-the-lab | 10.8 / 26.9 / 42.9 | 1620 × 1080 | 81.9 | 130.6 |
-| learning-session-group | 12.2 / 33.2 / 60.8 | 1920 × 1280 | 169.4 | 235.9 |
-| following-along | 21.5 / 68.0 / 135.1 | 1080 × 810 | 171.5 | 175.9 |
-| zcc-community | 16.5 / 49.0 / 99.9 | 1920 × 1280 | 314.5 | 376.1 |
-| zcc-team-problems | 13.3 / 32.1 / 55.8 | 1920 × 1280 | 134.4 | 202.6 |
-| zcc-first-place | 9.9 / 24.0 / 43.0 | 1920 × 1280 | 108.1 | 167.0 |
-| zcc-second-place | 10.4 / 26.2 / 45.3 | 1920 × 1280 | 109.3 | 171.3 |
-| zcc-third-place | 10.2 / 24.5 / 43.0 | 1920 × 1280 | 106.4 | 163.1 |
-| session-audience | 14.3 / 43.8 / 75.7 | 1620 × 1080 | 154.9 | 199.5 |
-| zcc-organizer-support | 10.4 / 24.5 / 39.5 | 1920 × 1280 | 102.7 | 166.4 |
-| zcc-friendly-moment | 15.5 / 42.1 / 84.6 | 1280 × 1920 | 128.0 | 177.0 |
-| zcc-participant-photo | 13.4 / 38.3 / 67.0 | 1920 × 1280 | 194.0 | 260.0 |
-| previous-edition-recognition-a | 11.9 / 30.8 / 56.7 | 1920 × 1280 | 151.9 | 215.6 |
-| previous-edition-recognition-b | 11.2 / 29.0 / 50.5 | 1920 × 1280 | 126.0 | 191.9 |
-| previous-edition-recognition-c | 9.8 / 24.7 / 42.1 | 1920 × 1280 | 109.4 | 165.7 |
-| isolve-stickers | 4.8 / 11.9 / 19.1 | 1620 × 1080 | 38.7 | 73.4 |
+Every prepared WebP/JPEG dimension is checked against the manifest by `npm test`; no file is upscaled and full views have a longest edge of at most 1920 pixels. Orientation is applied before resizing. All thumbnails use contain framing, preserving entire groups and portrait compositions.
 
-Exact byte counts and source mapping: gallery-image-report.json and ../scripts/gallery-import-manifest.json.
+The four added ZCC Contest photos are `zcc-before-the-start`, `zcc-solving-side-by-side`, `zcc-working-through-ideas`, and `zcc-thinking-together`. ZCC means Zaytoonah Coding Contest.
 
-Chrome mobile network check passed at 120 ms latency and 180,000 bytes/s download throughput: gallery image requests used 320/640/960 variants; no unopened full images or unrequested later metadata pages downloaded. Desktop/mobile filters and 6/6/4 pagination passed. Tablet frames stayed at 3:2; portrait lightbox remained uncropped. Gallery-related layout shift stayed below 0.02 in the framing check.
+The source mapping is in `scripts/gallery-manifest.json`; numerical thumbnail/lightbox data is also in `docs/gallery-image-report.json`. Neither preparation manifest is imported into frontend JavaScript.
 
-Supabase was not configured. No live database import, Auth save, or Storage upload is claimed. See gallery-setup.md.
+Browser verification covers metadata deferred until the section approaches view, All pagination 6/6/6/2, category queries, uncropped portrait display, all four new photos, keyboard/focus behavior, and a mobile network check. See [verification notes](verification.md).

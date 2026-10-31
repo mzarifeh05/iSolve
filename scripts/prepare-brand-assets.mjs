@@ -2,7 +2,7 @@ import sharp from 'sharp';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-const [heroFile,logoFile] = process.argv.slice(2);
+const [heroFile,logoFile,iteamFile] = process.argv.slice(2);
 if (!heroFile || !logoFile) throw new Error('Provide the supplied hero image and extracted transparent logo.');
 const bytes = await readFile(heroFile);
 const hash = createHash('sha256').update(bytes).digest('hex').slice(0,12);
@@ -18,6 +18,7 @@ for (const width of [768,1280,meta.width].filter((value,index,array)=>value<=met
   variants.push({width:webp.info.width,height:webp.info.height,src:`/assets/${stem}.webp`,fallback:`/assets/${stem}.jpg`,bytes:webp.data.length});
 }
 await writeFile('src/data/hero.js',`// Prepared from the user's supplied hero image.\nexport const heroImages = ${JSON.stringify(variants,null,2)};\n`);
-await sharp(logoFile).trim().png().toFile('public/assets/isolve-logo-transparent.png');
+await sharp(logoFile).trim().resize({width:698,withoutEnlargement:true}).png({compressionLevel:9}).toFile('public/assets/isolve-logo-transparent.png');
+if(iteamFile){const bytes=await readFile(iteamFile);await writeFile('public/assets/iteam-logo.png',await sharp(bytes).resize({width:440,withoutEnlargement:true}).png({compressionLevel:9}).toBuffer());}
 for (const size of [32,64,180,512]) await sharp(logoFile).trim().resize(size,size,{fit:'contain',background:{r:0,g:0,b:0,alpha:0}}).png().toFile(`public/favicon-${size}.png`);
 console.log(JSON.stringify({hero:variants,favicon_sizes:[32,64,180,512]}));

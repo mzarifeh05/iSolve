@@ -1,13 +1,16 @@
-# Verification after moving the application
+# Static single-page verification
 
-Checked on October 29, 2026, from the outer `iSolve` repository.
+Checked on October 31, 2026, from the outer `iSolve` repository.
 
-- Preserved the existing `.git`, `main` branch, history, and GitHub origin (`https://github.com/mzarifeh05/iSolve`). No submodules or additional `.git` files/directories remain inside the project. The generated gh-pages cache was moved to `C:\Users\Mohammed Zarifeh\AppData\Local\Temp\isolve-gh-pages-cache-20261029` so its disposable repository is outside the project.
-- Removed the empty nested application directory after moving all application files to the root. Dependencies, assets, scripts, and tests resolve from the new location.
-- Clean `npm ci --include=dev` with Node.js 24.22.1 completed successfully; npm reported zero vulnerabilities.
-- ESLint, all 9 unit/content tests, and the production Vite build passed with Node.js 24.22.1. Build filenames matched the earlier build, including the main application bundle, after the move.
-- Full Chrome Playwright suite: **17 passed, 1 skipped**. The skipped case is the desktop copy of the mobile-only network measurement; the mobile measurement passed. Coverage includes Arabic-first RTL, English persistence, all public pages, equal team cards and loaded portraits, phone navigation, registration/contact URLs, retired route 404s, gallery pagination/filtering, full-image requests, uncropped portrait framing, keyboard/focus behavior, layout stability, throttled mobile loading, and production/demo configuration behavior.
-- All six database migrations and both SQL permission suites passed in local PGlite with minimal Supabase Auth/Storage schema scaffolds. This checks PostgreSQL roles, RLS, private draft access, administrator operations, and URL constraints.
-- Added `.node-version`, `render.yaml`, and [Render deployment instructions](render-deployment.md), including the SPA rewrite.
+- ESLint passed. The production Vite build passed with one application script and one stylesheet; no administration bundle is emitted.
+- **8 unit/content checks passed**, including every gallery WebP/JPEG variant's real dimensions, 20 unique source hashes, all four added photos, stable 6/6/6/2 pagination, supplied team names and destinations, bilingual fallback, and actual zero-alpha pixels in the shared transparent logo.
+- **13 Chrome browser checks passed; 1 skipped.** The skip is the desktop duplicate of the mobile-only network check; the mobile check passed. Tests run against the production build at desktop and phone sizes and also exercise 820-pixel tablet and 320-pixel narrow layouts.
+- Browser checks verify the six main sections in the requested order, native anchor navigation with correct sticky-header clearance, persistent registration access, eight buttons pointing to the exact supplied Google Form, Arabic-first RTL and remembered English, five equal team cards and working portraits, header/footer logo loading, footer social links, FAQ interaction, and old bookmark redirects.
+- Gallery checks cover deferred six-photo metadata pages, filters, all 20 entries, actual loading of the four new photos, full images on demand, uncropped portraits, keyboard arrows in RTL, Escape, focus trapping/restoration, scroll locking, and stable frame layout.
+- After compressing the shared logos, all 8 unit checks and the production build passed again, along with four focused desktop/mobile logo and page checks. The iSolve PNG decreased from 858,940 to 88,194 bytes; the iTeam PNG decreased from 738,222 to 19,965 bytes. Original source images remain unchanged.
+- Source and dependency checks found no Supabase client, authentication, administrator operations, SQL migrations, upload/import command, environment-variable requirements, or React Router dependency. Browser checks found no Supabase/Auth/REST requests.
+- Only the original outer `.git` directory remains inside the project. The GitHub remote/history were preserved.
 
-No real Supabase credentials are configured. Live authentication, signed image URLs, administrator saves, and uploads need verification after connecting a real Supabase project. Registration-button URLs are covered by browser tests; this check did not submit a Google Form. GitHub push and Render deployment are left for the steps in the deployment guide.
+The production dependency audit reported zero advisories. The full development-tooling audit reports five moderate findings in the existing ESLint/minimatch dependency chain; no forced downgrade or major override was applied. These are development tools and are not part of the browser bundle.
+
+Registration links and their new-tab behavior are checked; no Google Form response was submitted. GitHub push and Render deployment are separate from these local checks. See [deployment instructions](render-deployment.md) and [measured assets](gallery-assets.md).

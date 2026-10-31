@@ -1,26 +1,12 @@
-export const galleryTranslations = {
-  en: {
-    eyebrow:'LEARNING. CHALLENGES. GOOD COMPANY.',title:'Moments from iSolve.',intro:'Learning together, working through challenges, and celebrating each step forward.',
-    all:'All',training:'Training',zcc:'ZCC Contest',moments:'Club Moments',filters:'Filter photos',more:'Show more',loading:'Loading photos…',retry:'Try again',loadError:'We could not load the photos. Please try again.',imageError:'This photo could not be loaded.',empty:'No published photos in this category yet.',
+export const galleryTranslations={
+  en:{
+    eyebrow:'LEARNING. CHALLENGES. GOOD COMPANY.',title:'iSolve moments.',intro:'From iSolve sessions to the Zaytoonah Coding Contest (ZCC): learning together, solving challenges, and celebrating each step forward.',
+    all:'All',training:'Training',zcc:'ZCC Contest',moments:'Club Moments',filters:'Filter photos',more:'Show more',loading:'Loading photos…',retry:'Try again',loadError:'We could not load the photos. Please try again.',imageError:'This photo could not be loaded.',empty:'No photos in this category yet.',
     open:'Open photo: {{caption}}',close:'Close photo',previous:'Previous photo',next:'Next photo',viewer:'Photo viewer',position:'Photo {{number}}',
-    manage:'Photo gallery',add:'Add photo',edit:'Edit',save:'Save changes',cancel:'Cancel',saved:'Photo saved.',failed:'The changes could not be saved. Check your connection and permissions.',
-    remove:'Delete',confirm:'Delete this photo and its uploaded variants?',deleted:'Photo deleted.',published:'Published',draft:'Draft',publish:'Publish',unpublish:'Move to draft',order:'Display order',category:'Category',
-    caption:'Caption',alt:'Image description for accessibility',english:'English',arabic:'Arabic',languageHint:'Add a caption and a visual description in at least one language. Describe the photo without guessing names or dates.',
-    file:'Photo file',fileHint:'JPEG, PNG or WebP, up to 25 MB. Optimized variants are created once before upload.',replace:'Replace photo (optional)',required:'Add a photo, a caption and an image description.',
-    event:'Event label (optional)',date:'Event date (optional)',unknown:'Leave unknown dates blank.',fit:'Thumbnail framing',contain:'Show full photo',cover:'Fill frame',focalX:'Horizontal focal point (%)',focalY:'Vertical focal point (%)',
-    duplicate:'This photo is already in the gallery. Edit the existing entry.',invalidImage:'Choose a valid JPEG, PNG or WebP image.',size:'Choose a photo no larger than 25 MB.',format:'This browser cannot prepare WebP images. Use the documented local import workflow.',
-    processing:'Preparing and uploading optimized images…',readOnly:'Read-only preview. Uploads and saving are disabled.',cleanup:'The entry changed, but unused images could not be removed. Check Storage.',invalid:'Check the order, date, and focal point values.',
   },
-  ar: {
-    eyebrow:'تعلّم. تحدّيات. ورفقة جميلة.',title:'لحظات من iSolve.',intro:'نتعلّم معًا، ونخوض التحدّيات، ونحتفل بكل خطوة نتقدّم بها.',
-    all:'الكل',training:'التدريب',zcc:'مسابقة ZCC',moments:'لحظات النادي',filters:'تصفية الصور',more:'عرض المزيد',loading:'جارٍ تحميل الصور…',retry:'حاول مجددًا',loadError:'تعذّر تحميل الصور. حاول مرة أخرى.',imageError:'تعذّر تحميل هذه الصورة.',empty:'لا توجد صور منشورة في هذا التصنيف بعد.',
+  ar:{
+    eyebrow:'تعلّم. تحدّيات. ورفقة جميلة.',title:'لحظات iSolve.',intro:'من جلسات iSolve إلى مسابقة الزيتونة للبرمجة (ZCC): نتعلّم معًا، ونخوض التحدّيات، ونحتفل بكل خطوة نتقدّم بها.',
+    all:'الكل',training:'التدريب',zcc:'مسابقة ZCC',moments:'لحظات النادي',filters:'تصفية الصور',more:'عرض المزيد',loading:'جارٍ تحميل الصور…',retry:'حاول مجددًا',loadError:'تعذّر تحميل الصور. حاول مرة أخرى.',imageError:'تعذّر تحميل هذه الصورة.',empty:'لا توجد صور في هذا التصنيف بعد.',
     open:'افتح الصورة: {{caption}}',close:'أغلق الصورة',previous:'الصورة السابقة',next:'الصورة التالية',viewer:'عارض الصور',position:'الصورة {{number}}',
-    manage:'معرض الصور',add:'أضف صورة',edit:'تعديل',save:'حفظ التغييرات',cancel:'إلغاء',saved:'تم حفظ الصورة.',failed:'تعذّر حفظ التغييرات. تحقّق من الاتصال والصلاحيات.',
-    remove:'حذف',confirm:'هل تريد حذف هذه الصورة ونسخها المرفوعة؟',deleted:'تم حذف الصورة.',published:'منشور',draft:'مسودة',publish:'نشر',unpublish:'إعادة إلى المسودات',order:'ترتيب العرض',category:'التصنيف',
-    caption:'التعليق',alt:'وصف مرئي لإتاحة الصورة',english:'بالإنجليزية',arabic:'بالعربية',languageHint:'أضف تعليقًا ووصفًا لما يظهر بالصورة بلغة واحدة على الأقل. لا تخمّن الأسماء أو التواريخ.',
-    file:'ملف الصورة',fileHint:'JPEG أو PNG أو WebP، حتى 25 ميغابايت. تُجهّز النسخ المحسّنة مرة واحدة قبل الرفع.',replace:'استبدال الصورة (اختياري)',required:'أضف الصورة والتعليق والوصف المرئي.',
-    event:'اسم الفعالية (اختياري)',date:'تاريخ الفعالية (اختياري)',unknown:'اترك التاريخ فارغًا إن لم يكن مؤكدًا.',fit:'تأطير الصورة المصغّرة',contain:'إظهار الصورة كاملة',cover:'ملء الإطار',focalX:'موضع التركيز الأفقي (%)',focalY:'موضع التركيز العمودي (%)',
-    duplicate:'هذه الصورة موجودة في المعرض. يمكنك تعديل العنصر الموجود.',invalidImage:'اختر صورة صالحة بصيغة JPEG أو PNG أو WebP.',size:'اختر صورة لا يتجاوز حجمها 25 ميغابايت.',format:'لا يدعم هذا المتصفح تجهيز WebP. استخدم خطوات الاستيراد المحلي الموضّحة في الدليل.',
-    processing:'جارٍ تجهيز النسخ المحسّنة ورفعها…',readOnly:'معاينة للقراءة فقط. الرفع والحفظ غير متاحين.',cleanup:'تم تغيير العنصر، لكن تعذّر حذف صور لم تعد مستخدمة. راجع التخزين.',invalid:'تحقّق من ترتيب العرض والتاريخ وموضع التركيز.',
   },
 };

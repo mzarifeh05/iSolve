@@ -1,6 +1,6 @@
 import sharp from 'sharp';
 import { createHash } from 'node:crypto';
-import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { catalog } from './gallery-catalog.mjs';
@@ -15,11 +15,30 @@ await mkdir(metadataDir, { recursive: true });
 const seen = new Map();
 const records = [];
 const mapping = [];
+let previousRecords=[];
+try { previousRecords=JSON.parse(await readFile(path.join(root,'scripts/gallery-manifest.json'),'utf8')).records; }
+catch(error) { if(error.code!=='ENOENT')throw error; }
 for (const [sort_order, item] of catalog.entries()) {
   const input = await readFile(path.join(sourceDir, item.source));
   const hash = createHash('sha256').update(input).digest('hex');
   if (seen.has(hash)) { mapping.push({ source: item.source, duplicate_of: seen.get(hash) }); continue; }
   seen.set(hash, item.source);
+  // Reuse verified immutable variants when adding photos to an existing collection.
+  const previous=previousRecords.find(record=>record.content_hash===hash&&record.slug===item.slug);
+  if(previous){
+    let reusable=true;
+    for(const variant of [...previous.variants.thumbnails,previous.variants.lightbox]){
+      for(const filename of [variant.path,variant.fallback_path]){
+        try { await access(path.join(root,'public',filename)); } catch { reusable=false; }
+      }
+    }
+    if(reusable){
+      const {source,...content}=item;
+      records.push({...content,id:previous.id,content_hash:hash,source_filename:source,source_width:previous.source_width,source_height:previous.source_height,sort_order,variants:previous.variants});
+      mapping.push({source,id:previous.id,content_hash:hash,slug:item.slug});
+      continue;
+    }
+  }
   const image = sharp(input).rotate();
   const meta = await image.metadata();
   const portrait = [5,6,7,8].includes(meta.orientation);
@@ -53,13 +72,13 @@ for (const filename of (await readdir(sourceDir)).filter(name => /^club sticker 
   if (seen.has(hash)) mapping.push({ source: filename, duplicate_of: seen.get(hash), content_hash: hash });
 }
 for (const category of ['all','training','zcc','moments']) {
-  const categoryRecords = records.filter(row => row.published && (category === 'all' || row.category === category));
+  const categoryRecords = records.filter(row => category === 'all' || row.category === category);
   for (let offset = 0; offset < Math.max(1,categoryRecords.length); offset += 6) {
     const items = categoryRecords.slice(offset,offset + 6).map(({ source_filename: _source, content_hash: _hash, source_width: _w, source_height: _h, ...record }) => record);
     await writeFile(path.join(metadataDir, `${category}-${offset}.json`), JSON.stringify({ items, hasMore: offset + 6 < categoryRecords.length, nextOffset: offset + items.length }));
   }
 }
-await writeFile(path.join(root,'scripts/gallery-import-manifest.json'), JSON.stringify({ version:1, records, mapping },null,2));
+await writeFile(path.join(root,'scripts/gallery-manifest.json'), JSON.stringify({ version:1, records, mapping },null,2));
 const sizes = records.flatMap(row => row.variants.thumbnails.map(variant => variant.bytes));
 const report = { unique_photos:records.length, thumbnail_widths:[320,640,960], thumbnail_webp_bytes:{ min:Math.min(...sizes),max:Math.max(...sizes),total:sizes.reduce((a,b)=>a+b,0) }, lightbox_webp_bytes:records.map(row=>({slug:row.slug,width:row.variants.lightbox.width,height:row.variants.lightbox.height,bytes:row.variants.lightbox.bytes})), source_mapping:mapping };
 await writeFile(path.join(root,'docs/gallery-image-report.json'),JSON.stringify(report,null,2));

@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 
-test('gallery metadata waits for viewport, paginates 6/6/4, and filters server pages',async({page},info)=>{
+test('gallery metadata waits for viewport, paginates 6/6/6/2, and filters server pages',async({page},info)=>{
   const requests=[];page.on('request',request=>requests.push(request.url()));
   await page.goto('/');await page.evaluate(()=>document.fonts.ready);
   expect(requests.some(url=>url.includes('/gallery-data/'))).toBe(false);
@@ -9,7 +9,8 @@ test('gallery metadata waits for viewport, paginates 6/6/4, and filters server p
   expect(requests.filter(url=>url.includes('/gallery-data/')).every(url=>url.endsWith('/all-0.json'))).toBe(true);
   expect(requests.some(url=>/-full\.(webp|jpg)/.test(url))).toBe(false);
   await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(12);
-  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(16);
+  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(18);
+  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(20);
   await expect(page.locator('.gallery-more')).toHaveCount(0);
   await page.getByRole('button',{name:'التدريب',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(4);
   expect(requests.some(url=>url.endsWith('/training-0.json'))).toBe(true);

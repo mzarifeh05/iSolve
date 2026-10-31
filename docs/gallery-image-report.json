@@ -1,5 +1,5 @@
 {
-  "unique_photos": 16,
+  "unique_photos": 20,
   "thumbnail_widths": [
     320,
     640,
@@ -8,7 +8,7 @@
   "thumbnail_webp_bytes": {
     "min": 4964,
     "max": 138390,
-    "total": 1726490
+    "total": 2036752
   },
   "lightbox_webp_bytes": [
     {
@@ -106,6 +106,30 @@
       "width": 1620,
       "height": 1080,
       "bytes": 39648
+    },
+    {
+      "slug": "zcc-before-the-start",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 161228
+    },
+    {
+      "slug": "zcc-solving-side-by-side",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 53420
+    },
+    {
+      "slug": "zcc-working-through-ideas",
+      "width": 1280,
+      "height": 1920,
+      "bytes": 65222
+    },
+    {
+      "slug": "zcc-thinking-together",
+      "width": 1920,
+      "height": 1280,
+      "bytes": 96946
     }
   ],
   "source_mapping": [
@@ -204,6 +228,30 @@
       "id": "f7a1a982-9579-5130-acd2-7cdf21c350d8",
       "content_hash": "f7a1a9829579d1300cd27cdf21c350d8e9917a6eaf51cd595aae2a8aa75fb0ba",
       "slug": "isolve-stickers"
+    },
+    {
+      "source": "participants pictures before contest starts.JPG",
+      "id": "fad1cf9c-9f13-59db-a613-2ab851b5237b",
+      "content_hash": "fad1cf9c9f1339db06132ab851b5237b4f5d5381202614f5d80248f2b47c3e5a",
+      "slug": "zcc-before-the-start"
+    },
+    {
+      "source": "participants solving in zcc (2).JPG",
+      "id": "b17ca3d7-0086-52a3-a501-5c3873d22bfd",
+      "content_hash": "b17ca3d7008602a3c5015c3873d22bfd870a435412456bb40e77f31efcbad909",
+      "slug": "zcc-solving-side-by-side"
+    },
+    {
+      "source": "participants solving in zcc.JPG",
+      "id": "74a1ae23-f804-5f93-a802-ad78d734ebc2",
+      "content_hash": "74a1ae23f8049f93f802ad78d734ebc2002734c11d983c6235021cf51e3cc725",
+      "slug": "zcc-working-through-ideas"
+    },
+    {
+      "source": "participatns thinking in zcc.JPG",
+      "id": "1fcb1386-eba2-515c-ae0b-e702648c1173",
+      "content_hash": "1fcb1386eba2e15cfe0be702648c11733d81ec7ac7a7aa2b6ece7491cb3bf587",
+      "slug": "zcc-thinking-together"
     }
   ]
 }

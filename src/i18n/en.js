@@ -1,69 +1,54 @@
-﻿export default {
-  common: {
-    loading: 'Getting things ready…', error: 'We couldn’t load this content.', retry: 'Try again',
-    configuration: 'The club’s content connection needs attention. Please try again later.',
-    external: 'Opens in a new tab', email: 'Email',
+export default {
+  "common": {
+    "external": "Opens in a new tab"
   },
-  home: {
-    eyebrow: 'A LITTLE CURIOSITY. A LOT TO DISCOVER.',
-    line1: 'Learn together.', line2: 'Think deeper.', line3: 'Solve better.',
-    description: 'A question. An idea. A few steps toward a solution. At iSolve, we explore how to solve problems with code — by trying things, sharing ideas, and learning together.',
-    join: 'Join the Club', about: 'Discover iSolve', note: 'Beginners welcome. No competition experience needed.',
-    imageAlt: 'Supplied iSolve artwork showing a team at a computer, with the club logo and brand-colored balloons', imageCaption: 'Together, from an idea to a solution.',
-    sticker: 'Think · Try · Share', stickerNote: 'A good idea can start with you.',
-    cycleEyebrow: 'HOW WE LEARN', cycleTitle: 'From “how?” to “I’ve got it!”',
-    cycleDescription: 'You don’t have to figure everything out alone. Here’s what learning together looks like.',
-    missionEyebrow: 'BEYOND WRITING CODE', missionTitle: 'Build an idea. Find your own way forward.',
-    missionDescription: 'iSolve is a coding club by iTeam at Al-Zaytoonah University of Jordan. We help students build confidence, break a problem into smaller steps, and bring an idea to life — together.',
-    missionLink: 'More about our club', missionVisual1: 'A question', missionVisual2: 'A shared idea', missionVisual3: 'A new possibility',
-    teamEyebrow: 'MEET YOUR PEOPLE', teamTitle: 'Different minds. One shared curiosity.',
-    teamDescription: 'Meet the people helping make iSolve a welcoming place to ask, try, and learn.', teamLink: 'Meet the team',
-    ctaEyebrow: 'COME AS YOU ARE', ctaTitle: 'Your curiosity belongs here.',
-    ctaDescription: 'Taking your first steps in programming or looking for a new challenge? Let’s learn something together.', ctaButton: 'Join iSolve',
+  "home": {
+    "eyebrow": "A LITTLE CURIOSITY. A LOT TO DISCOVER.",
+    "line1": "Learn together.",
+    "line2": "Think deeper.",
+    "line3": "Solve better.",
+    "description": "A question. An idea. A few steps toward a solution. At iSolve, we explore how to solve problems with code — by trying things, sharing ideas, and learning together.",
+    "about": "Discover iSolve",
+    "note": "Beginners welcome. No competition experience needed.",
+    "imageAlt": "Supplied iSolve artwork showing a team at a computer, with the club logo and brand-colored balloons",
+    "imageCaption": "Together, from an idea to a solution.",
+    "sticker": "Think · Try · Share",
+    "stickerNote": "A good idea can start with you."
   },
-  cycle: {
-    learn: 'Discover an idea', learnText: 'Start with a new idea, explained one clear step at a time.',
-    examples: 'Explore examples', examplesText: 'Work through examples together and talk about how they work.',
-    practice: 'Try it as a team', practiceText: 'Put ideas into practice, solve problems, and help each other along.',
-    share: 'Share and challenge', shareText: 'Discuss different solutions and try friendly programming challenges.',
+  "about": {
+    "eyebrow": "HELLO, WE’RE ISOLVE",
+    "title": "Build an idea. Find your own way forward.",
+    "intro": "iSolve is a coding club by iTeam at Al-Zaytoonah University of Jordan. We learn through practical activities, teamwork, discussion, and friendly challenges.",
+    "welcome": "First year? New to programming? Already have some experience? You’re welcome. Curiosity, participation, and a willingness to learn matter more than having all the answers.",
+    "ideas": [
+      "Understand the problem",
+      "Try it together",
+      "Share what you learn"
+    ]
   },
-  about: {
-    eyebrow: 'HELLO, WE’RE ISOLVE', title: 'A place to try. A community to grow with.',
-    intro: 'iSolve is a coding club by iTeam at Al-Zaytoonah University of Jordan. We learn through practical activities, teamwork, discussion, and friendly challenges.',
-    thinkingTitle: 'First, understand the question.', thinkingText: 'Solving a problem means understanding what’s needed, breaking it into smaller steps, and trying an idea. Programming helps us turn those steps into something that works. We learn how to build the idea, not just write the code.',
-    challengesTitle: 'A challenge we can enjoy together.', challengesText: 'Programming competitions bring small problems into timed challenges. Our friendly activities help you practise explaining your thinking and trying solutions, without needing competition experience.',
-    welcomeTitle: 'You can start right here.', welcomeText: 'First year? New to programming? Already have some experience? You’re welcome. Curiosity, participation, and a willingness to learn matter more than having all the answers.',
-    mission: 'Our mission', missionText: 'Help students think clearly, solve problems, and develop ideas from scratch through explanation, practice, and teamwork.',
-    vision: 'Our hope', visionText: 'A supportive community where students grow in confidence, share knowledge, and develop skills they can use in future programming challenges.',
-    valuesEyebrow: 'WHAT WE BRING TO THE TABLE', valuesTitle: 'Good habits. Shared by everyone.',
-    curiosity: 'Stay curious', curiosityText: 'Ask questions. Explore an idea. Try another way.',
-    teamwork: 'Work together', teamworkText: 'Listen, share your thinking, and make room for others.',
-    practice: 'Keep trying', practiceText: 'Getting stuck is part of learning. Take a small step and try again.',
-    sharing: 'Share what you learn', sharingText: 'A simple explanation can help someone else move forward.',
-    updatesTitle: 'Stay in the loop.', updatesText: 'Session announcements and current details are shared through the club’s WhatsApp groups. Visit the Join page for registration and available contact links.',
-    join: 'Find out how to join',
+  "team": {
+    "eyebrow": "MEET YOUR PEOPLE",
+    "title": "Different minds. One shared curiosity.",
+    "intro": "Meet the people helping make iSolve a welcoming place to ask, try, and learn.",
+    "role": "Team Member",
+    "photoAlt": "Photo of {{name}}"
   },
-  team: {
-    eyebrow: 'THE PEOPLE BEHIND ISOLVE', title: 'We’re here to learn with you.',
-    intro: 'A team of people who share a love of learning and helping ideas take shape. Every member has a place at the table.',
-    role: 'Team Member', emptyTitle: 'Meet the team soon.', emptyText: 'Team profiles will appear here once they’re published.',
-    photoAlt: 'Photo of {{name}}',
+  "registration": {
+    "eyebrow": "YOUR FIRST STEP CAN START HERE",
+    "title": "Ready to join iSolve?",
+    "intro": "Taking your first steps in programming or looking for a new challenge? Let’s learn something together.",
+    "notice": "This opens a Google-hosted form in a new tab.",
+    "expectTitle": "What to bring? An open mind.",
+    "expectations": [
+      "Curiosity about how to solve a problem.",
+      "A willingness to ask, practise, and try again.",
+      "Respect for your teammates and their ideas."
+    ],
+    "form": "Register with Google Forms"
   },
-  join: {
-    eyebrow: 'YOUR FIRST STEP CAN START HERE', title: 'Bring a question. Bring yourself.',
-    intro: 'iSolve is for university students who want to explore programming, build confidence, and learn with others. Beginners and experienced students are welcome. No competition experience is needed.',
-    panelTitle: 'Ready to join iSolve?', panelText: 'Registration happens through the club’s Google Form. When registration is open, you’ll find the direct link here.',
-    open: 'Open Registration Form', externalNotice: 'This opens a Google-hosted form in a new tab.',
-    closedTitle: 'Registration isn’t open right now.', closedText: 'The form link will appear here when registration opens. You can stay in touch through the links below.',
-    expectTitle: 'What to bring? An open mind.', expectations: ['Curiosity about how to solve a problem.', 'A willingness to ask, practise, and try again.', 'Respect for your teammates and their ideas.'],
-    faqEyebrow: 'IT’S GOOD TO ASK', faqTitle: 'A few things you might wonder.', noFaq: 'More answers will be added here soon.',
-    embedTitle: 'iSolve registration Google Form', formLoading: 'If the form doesn’t load, use the direct registration link above.',
-    contactEyebrow: 'LET’S STAY IN TOUCH', contactTitle: 'Questions? You’re welcome to reach out.', contactText: 'Follow iTeam’s pages for club news and ways to stay connected.',
-    whatsappText: 'Session announcements and current details are shared through the club’s WhatsApp groups.', whatsappNoLink: 'A group invitation will appear here if one is made available.', whatsappButton: 'Open the WhatsApp group',
-    instagram: 'Instagram', facebook: 'Facebook', linkedin: 'LinkedIn', github: 'GitHub',
-  },
-  notFound: {
-    eyebrow: '404 · A SMALL DETOUR', title: 'This page isn’t here.',
-    description: 'The link may have changed, or there may be a typo. Let’s take you back to a familiar place.', button: 'Back to home',
-  },
+  "faq": {
+    "eyebrow": "IT’S GOOD TO ASK",
+    "title": "A few things you might wonder.",
+    "note": "Ready to take the first step? There’s a place for you here."
+  }
 };

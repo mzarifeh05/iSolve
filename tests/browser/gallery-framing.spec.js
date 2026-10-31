@@ -12,12 +12,17 @@ test('tablet frames, portrait lightbox and gallery layout stay stable',async({pa
     const box=await frame.boundingBox();expect(box.width/box.height).toBeCloseTo(1.5,1);
   }
   await page.getByRole('button',{name:'مسابقة ZCC',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(6);
-  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(8);
+  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(12);
   const portrait=page.locator('.gallery-card').filter({has:page.locator('img[src*="zcc-friendly-moment"]')});
   await expect(portrait).toHaveCount(1);await expect(portrait.locator('img')).toHaveCSS('object-fit','contain');
   await portrait.locator('button').click();const full=page.locator('.gallery-lightbox img');await expect(full).toBeVisible();
   await expect.poll(()=>full.evaluate(image=>image.complete&&image.naturalWidth>0)).toBe(true);
   expect(await full.evaluate(image=>image.naturalWidth<image.naturalHeight)).toBe(true);
   await expect(full).toHaveCSS('object-fit','contain');await page.keyboard.press('Escape');
+  for(const slug of ['zcc-before-the-start','zcc-solving-side-by-side','zcc-working-through-ideas','zcc-thinking-together']){
+    const image=page.locator(`.gallery-card img[src*="${slug}"]`);await image.scrollIntoViewIfNeeded();
+    await expect.poll(()=>image.evaluate(node=>node.complete&&node.naturalWidth>0)).toBe(true);
+    await expect(image).toHaveCSS('object-fit','contain');
+  }
   expect(await page.evaluate(()=>window.galleryShift)).toBeLessThan(.02);
 });

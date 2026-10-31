@@ -1,20 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronLeft,ChevronRight,X,Expand,RefreshCw,ImageOff } from 'lucide-react';
-import { galleryCategories,loadGallery,galleryLightbox,renewGalleryThumbnails } from '../lib/gallery.js';
+import { galleryCategories,loadGallery,galleryLightbox } from '../lib/gallery.js';
 import { localized } from '../lib/utils.js';
+import RegistrationButton from '../components/RegistrationButton.jsx';
 import './gallery.css';
 
 export function GalleryPicture({photo,onOpen}) {
   const {t,i18n}=useTranslation('gallery');
   const [failed,setFailed]=useState(false);
   const [retry,setRetry]=useState(0);
-  const [renewed,setRenewed]=useState(null);
-  const images=renewed||photo.variants.thumbnails;
+  const images=photo.variants.thumbnails;
   const fallback=images.find(image=>image.width>=640)||images.at(-1);
   const caption=localized(photo,'caption',i18n.language);
   return <article className="gallery-card"><div className="gallery-frame">
-    {failed ? <div className="gallery-image-error"><ImageOff aria-hidden="true"/><p>{t('imageError')}</p><button onClick={async()=>{try{setRenewed(await renewGalleryThumbnails(photo));setFailed(false);setRetry(value=>value+1);}catch{setFailed(true);}}}>{t('retry')}</button></div> : <button className="gallery-open" onClick={onOpen} aria-label={t('open',{caption})} aria-haspopup="dialog">
+    {failed ? <div className="gallery-image-error"><ImageOff aria-hidden="true"/><p>{t('imageError')}</p><button onClick={()=>{setFailed(false);setRetry(value=>value+1);}}>{t('retry')}</button></div> : <button className="gallery-open" onClick={onOpen} aria-label={t('open',{caption})} aria-haspopup="dialog">
       <picture key={`${photo.id}-${retry}`}><source type="image/webp" srcSet={images.map(image=>`${image.url||image.path} ${image.width}w`).join(',')} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 84px) / 2), (max-width: 1296px) calc((100vw - 132px) / 3), 388px"/>
         <img src={fallback.fallback_url||fallback.fallback_path} srcSet={images.map(image=>`${image.fallback_url||image.fallback_path} ${image.width}w`).join(',')} sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 84px) / 2), (max-width: 1296px) calc((100vw - 132px) / 3), 388px" width={fallback.width} height={fallback.height} alt={localized(photo,'alt',i18n.language)} loading="lazy" decoding="async" style={{objectFit:photo.fit||'contain',objectPosition:`${photo.focal_x??50}% ${photo.focal_y??50}%`}} onError={()=>setFailed(true)}/></picture><span className="gallery-expand" aria-hidden="true"><Expand size={18}/></span>
     </button>}
@@ -89,7 +89,7 @@ export default function Gallery(){
     try{const page=await loadGallery({category,offset:state.nextOffset});if(id===request.current){setState(previous=>({...page,items:[...previous.items,...page.items],loading:false,error:false}));return page.items.length;}}
     catch{if(id===request.current)setState(previous=>({...previous,loading:false,error:true}));}finally{loadingPage.current=false;}return 0;
   }
-  return <section ref={section} className="section gallery-section" aria-labelledby="gallery-title"><div className="container"><div className="section-heading"><div><p className="eyebrow">{t('eyebrow')}</p><h2 id="gallery-title">{t('title')}</h2><p>{t('intro')}</p></div></div>
+  return <section id="moments" tabIndex={-1} ref={section} className="section gallery-section" aria-labelledby="gallery-title"><div className="container"><div className="section-heading"><div><p className="eyebrow">{t('eyebrow')}</p><h2 id="gallery-title">{t('title')}</h2><p>{t('intro')}</p></div><RegistrationButton className="small"/></div>
     <div className="gallery-filters" role="group" aria-label={t('filters')}>{galleryCategories.map(value=><button key={value} aria-pressed={category===value} onClick={()=>filter(value)}>{t(value)}</button>)}</div>
     <div className="gallery-grid" aria-busy={state.loading}>{state.items.map((photo,index)=><GalleryPicture key={photo.id} photo={photo} onOpen={()=>setSelected(index)}/>)}{state.loading&&!state.items.length&&[0,1,2,3,4,5].map(value=><div className="gallery-skeleton" key={value} aria-hidden="true"><div/><span/><span/></div>)}</div>
     {state.error&&<div className="gallery-status" role="alert"><p>{t('loadError')}</p><button className="button secondary" onClick={()=>state.items.length?more():setRevision(value=>value+1)}><RefreshCw size={16}/>{t('retry')}</button></div>}
