@@ -20,5 +20,5 @@ for (const width of [768,1280,meta.width].filter((value,index,array)=>value<=met
 await writeFile('src/data/hero.js',`// Prepared from the user's supplied hero image.\nexport const heroImages = ${JSON.stringify(variants,null,2)};\n`);
 await sharp(logoFile).trim().resize({width:698,withoutEnlargement:true}).png({compressionLevel:9}).toFile('public/assets/isolve-logo-transparent.png');
 if(iteamFile){const bytes=await readFile(iteamFile);await writeFile('public/assets/iteam-logo.png',await sharp(bytes).resize({width:440,withoutEnlargement:true}).png({compressionLevel:9}).toBuffer());}
-for (const size of [32,64,180,512]) await sharp(logoFile).trim().resize(size,size,{fit:'contain',background:{r:0,g:0,b:0,alpha:0}}).png().toFile(`public/favicon-${size}.png`);
-console.log(JSON.stringify({hero:variants,favicon_sizes:[32,64,180,512]}));
+for (const size of [32,64,180]) await sharp(logoFile).trim().resize(size,size,{fit:'contain',background:{r:0,g:0,b:0,alpha:0}}).png().toFile(`public/favicon-${size}.png`);
+console.log(JSON.stringify({hero:variants,favicon_sizes:[32,64,180]}));

@@ -29,7 +29,7 @@ export const members = [
     "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce05",
     "name_en": "Rakan Alqhaiwi",
     "name_ar": "Rakan Alqhaiwi",
-    "photo_url": "/assets/team/rakan-alqhaiwi.png"
+    "photo_url": "/assets/team/rakan-alqhaiwi.jpg"
   }
 ];
 export const faqs = [
@@ -60,6 +60,13 @@ export const faqs = [
     "question_ar": "كيف أستعد، وأين أجد الإعلانات؟",
     "answer_en": "Bring your questions and be ready to take part. Current announcements and any preparation details are shared through the club’s WhatsApp groups.",
     "answer_ar": "جهّز أسئلتك واستعد للمشاركة. نشارك الإعلانات الحالية وأي تفاصيل للتحضير عبر مجموعات النادي على WhatsApp."
+  },
+  {
+    "id": "weekly-gathering",
+    "question_en": "When and where do we meet?",
+    "question_ar": "متى وأين نجتمع؟",
+    "answer_en": "We gather every Thursday in the university labs to learn new techniques, think, and solve together.",
+    "answer_ar": "نجتمع كل يوم خميس في مختبرات الجامعة لنتعلّم تقنيات جديدة، ونفكّر ونحلّ المسائل معًا."
   },
   {
     "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce15",

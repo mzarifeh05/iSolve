@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "test": "node --test tests/*.test.js",
     "test:e2e": "playwright test",
-    "gallery:prepare": "node scripts/prepare-gallery.mjs"
+    "gallery:prepare": "node scripts/prepare-gallery.mjs",
+    "assets:check": "node scripts/check-assets.mjs"
   },
   "dependencies": {
     "i18next": "^26.2.0",

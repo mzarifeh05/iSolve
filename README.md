@@ -2,9 +2,13 @@
 
 A responsive Arabic/English **single-page, static website** for iSolve, an iTeam club at Al-Zaytoonah University of Jordan.
 
-The page scrolls through Hero → About → Team → iSolve Moments → Registration → FAQ → Footer. Navigation uses section anchors. Arabic/RTL is the first-visit default; the selected language is remembered locally. All five supplied team members have equal cards. The header and footer use the transparent iSolve logo.
+The page scrolls through Hero → About → Team → iSolve Moments → Registration → FAQ → Footer. Navigation uses section anchors. Arabic/RTL is the first-visit default; the selected language is remembered locally. All five supplied team members have equal cards, including Rakan's updated supplied portrait. The header, footer, favicons, and hero artwork use the logo without the old version label.
+
+We gather every Thursday in the university labs to learn new techniques, think, and solve together. This information appears in About and the bilingual FAQ; no specific time or lab number is assumed.
 
 Registration buttons link directly to the supplied Google Form in a new tab. The sticky header keeps registration visible on desktop and phones. The gallery contains 20 real supplied photos, optimized thumbnails, category filters, six-photo pagination, and an accessible full-image viewer. ZCC means **Zaytoonah Coding Contest**; winner captions say “Celebrating the winners.”
+
+Registration buttons appear in the header, hero, gallery heading, registration section, FAQ, and footer. About and Team have no registration buttons.
 
 ## Run locally
 
@@ -26,6 +30,7 @@ Open the Local URL printed by Vite. No environment variables, administrator acco
 | `npm test` | Verify bilingual content, supplied links, photos, and gallery data |
 | `npm run test:e2e` | Check the built site in Chrome on desktop and mobile |
 | `npm run gallery:prepare -- "PHOTO_DIRECTORY"` | Prepare optimized static gallery assets |
+| `npm run assets:check` | Detect missing or unused public files |
 
 Run `npm run build` before the browser checks. Playwright uses the installed Google Chrome browser and serves `dist` on port 4173.
 
@@ -43,6 +48,8 @@ After editing, build and redeploy. All content is maintained in source files; vi
 Follow the [step-by-step Render guide](docs/render-deployment.md). Use a **Static Site**, branch `main`, a blank Root Directory, build command `npm ci --include=dev && npm run build`, and publish directory `dist`. No environment variables are required. The root `render.yaml` supports optional Blueprint deployment and declares the SPA rewrite for old bookmarks.
 
 The repository is directly in the outer `iSolve` folder, with a single Git repository. Push the source changes to GitHub to deploy through the linked Render service.
+
+Unused poster/palette assets, superseded hero images, the old Rakan portrait, unused favicon size, legacy local helper scripts, and unused hero styles were removed. Preparation scripts, source manifests, tests, and hosting configuration remain in use.
 
 ## Verification
 

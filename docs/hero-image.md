@@ -1,11 +1,38 @@
-# Hero and favicon assets
+# Hero, logo, favicon, and portrait assets
 
-The hero now uses the user's supplied `hero section image.png`, without generative changes. Optimized WebP/JPEG variants are 768 × 432, 1280 × 720, and 1672 × 941, with WebP sizes 51,288 / 101,894 / 145,744 bytes. Paths are versioned under `public/assets/hero-isolve-5a702a65e237-*`; `src/data/hero.js` supplies responsive sources. CSS blends the white canvas into the existing palette. This branding artwork is kept separate from the real photo gallery.
+The shared iSolve logo, favicons, and the logo embedded in the hero artwork have been edited to remove the old “version 1” label. The built-in `image_gen` tool was used for those two raster edits, followed by Sharp resizing/compression. No fallback CLI or API credentials were used. The edited images were inspected visually.
 
-Transparent logo: `public/assets/isolve-logo-transparent.png`. Browser icons: `public/favicon-32.png`, `favicon-64.png`, `favicon-180.png`, and `favicon-512.png`. The old generic SVG icon was removed.
+The real gallery photos are unchanged apart from optimization. Rakan's current portrait comes from the user-supplied `C:\Users\Mohammed Zarifeh\Desktop\Rakan.jpeg`, rotated according to its metadata, resized without upscaling, and JPEG-compressed. It was not generatively edited.
 
-The transparent iSolve logo is now used in both navigation and footer. Its prepared PNG is resized to 698 pixels wide for small-screen and desktop display; the footer iTeam PNG is resized to 440 pixels wide. Both retain transparency and proportions. This asset preparation changes no logo text or design; the supplied originals remain untouched outside the project.
+## Final website files
 
-The built-in imagegen tool extracted the central iSolve sticker from the original poster. Sharp trimmed transparent margins and made the final icon sizes. Final extraction prompt:
+| Asset | Saved path | Dimensions / bytes |
+| --- | --- | --- |
+| Shared transparent logo | `public/assets/isolve-logo-transparent.png` | 698 × 279; 165,508 bytes; actual transparent alpha |
+| Hero WebP, small | `public/assets/hero-isolve-235581d96d4b-768.webp` | 768 × 432; 50,514 bytes |
+| Hero WebP, medium | `public/assets/hero-isolve-235581d96d4b-1280.webp` | 1280 × 720; 97,788 bytes |
+| Hero WebP, large | `public/assets/hero-isolve-235581d96d4b-1672.webp` | 1672 × 941; 138,188 bytes |
+| Hero JPEG fallbacks | Same three hero stems with `.jpg` | Used in `src/data/hero.js` |
+| Browser icons | `public/favicon-32.png`, `public/favicon-64.png`, `public/favicon-180.png` | Transparent 32, 64, and 180 pixel squares |
+| Rakan portrait | `public/assets/team/rakan-alqhaiwi.jpg` | 840 × 1187; 150,734 bytes |
 
-> Use case: background-extraction. Edit the supplied iSolve Coding Club poster. Extract ONLY the central white-outlined iSolve Coding Club sticker logo including its coding brackets, version 1 text, Coding Club text and small by:iTeam mark. Remove the entire blue-green rectangular poster background, organic background shapes and bottom-left social icons/handle. Preserve the original central logo's exact proportions, colors, typography, spelling, internal white background, and white sticker outline. No redraw, no new text, no new icon, no shadows. Return a tightly framed logo cutout on a genuinely transparent background with small even transparent margins. This is for an existing brand website favicon and brand asset.
+The favicon links include a revision query so browsers can refresh the updated artwork. The unused 512-pixel icon, old portrait, superseded hero variants, unused poster, and palette reference image were removed.
+
+## Final logo edit prompt
+
+Use case: precise-object-edit. Asset type: existing iSolve Coding Club transparent logo for website navigation, footer, and favicons. Primary request: remove ONLY the small text 'version 1' and its short underline above the letters lve. Fill that tiny area with the same plain white sticker interior. Keep the exact iSolve wordmark, lettering shapes, Coding Club lettering, coding brackets, by:iTeam mark, original colors, proportions, white sticker background and outline, and composition unchanged. Do not redesign, retype, shift, add or remove anything else. The background outside the sticker must be genuinely transparent with clean alpha edges; preserve transparency. Return the full logo at high quality. No extra text, no version label, no shadow, no rectangular background.
+
+## Final hero edit prompt
+
+Use case: precise-object-edit. Asset type: supplied website hero artwork. Remove ONLY the tiny text 'version 1' and its short underline within the iSolve logo on the blue banner, above the letters lve. Replace those pixels with matching plain white sticker interior. Preserve every other detail of the artwork: exact overall wide 1672:941 composition, the three students' faces and hair and clothing and poses, computer and code, balloons and colors, iSolve lettering and Coding Club lettering and by:iTeam logo, the blue backdrop, the white and light blue right side, all lighting and framing. Make no other change. Do not replace or redesign the logo, people, or composition. No new text, no watermark.
+
+## Reproduce responsive variants
+
+The built-in edit masters remain at their default generated-image locations outside the project:
+
+- Logo: `C:\Users\Mohammed Zarifeh\.codex\generated_images\01a18424-48df-7e00-99c7-1e7eaaf0e628\exec-1157a0f5-7f07-420e-8a90-bf60844c387d.png`
+- Hero: `C:\Users\Mohammed Zarifeh\.codex\generated_images\01a18424-48df-7e00-99c7-1e7eaaf0e628\exec-2e7c52bc-270a-4870-85b8-463d76f887ef.png`
+
+From the project directory, run `node scripts/prepare-brand-assets.mjs "EDITED_HERO_FILE" "EDITED_TRANSPARENT_LOGO_FILE"` using those files, or future approved replacement artwork. The optional third argument is an iTeam logo source. This prepares responsive hero images, the shared logo, and the three used favicon sizes. It does not create new AI edits.
+
+If preparing different hero artwork, remove its superseded variants after checking that `src/data/hero.js` points to the replacement. Run `npm run assets:check` to find unused or missing public files before rebuilding. External originals and generated masters are preserved; the browser consumes only the optimized files inside this repository.

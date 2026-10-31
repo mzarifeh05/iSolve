@@ -22,7 +22,8 @@ test('all five supplied members retain their names and available portraits',()=>
 test('registration and contact destinations remain exactly the supplied links',()=>{
   assert.equal(registrationUrl,'https://docs.google.com/forms/d/e/1FAIpQLSfmiIE9gbBjrtwJJZUyu-Xt3sixIKz4x4dWZQuTbxZttrMG7A/viewform?usp=sharing&ouid=101765325223954785073');
   assert.deepEqual(socialLinks.map(link=>link.url),['https://www.instagram.com/iteamzuj/','https://www.facebook.com/search/top?q=iteam%20-%20zuj','https://www.linkedin.com/company/iteamzuj/posts/?feedView=all']);
-  assert.equal(faqs.length,5);
+  assert.equal(faqs.length,6);
+  assert.match(faqs.find(faq=>faq.id==='weekly-gathering').answer_en,/every Thursday in the university labs/);
   assert.ok(faqs.every(faq=>faq.question_en&&faq.question_ar&&faq.answer_en&&faq.answer_ar));
   assert.doesNotMatch(faqs.at(-1).answer_en,/Join page/);
 });

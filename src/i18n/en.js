@@ -19,6 +19,7 @@ export default {
     "eyebrow": "HELLO, WE’RE ISOLVE",
     "title": "Build an idea. Find your own way forward.",
     "intro": "iSolve is a coding club by iTeam at Al-Zaytoonah University of Jordan. We learn through practical activities, teamwork, discussion, and friendly challenges.",
+    "gathering": "Every Thursday, we gather in the university labs to learn new techniques, think, and solve together.",
     "welcome": "First year? New to programming? Already have some experience? You’re welcome. Curiosity, participation, and a willingness to learn matter more than having all the answers.",
     "ideas": [
       "Understand the problem",
