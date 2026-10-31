@@ -14,12 +14,6 @@ export const members = [
     "photo_url": "/assets/team/leena-aburahmeh.png"
   },
   {
-    "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce03",
-    "name_en": "Yomna Aljabiri",
-    "name_ar": "Yomna Aljabiri",
-    "photo_url": "/assets/team/yomna-aljabiri.png"
-  },
-  {
     "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce04",
     "name_en": "Hala Darwish",
     "name_ar": "Hala Darwish",

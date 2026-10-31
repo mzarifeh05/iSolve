@@ -6,7 +6,7 @@ test('one page has the requested order, both languages, working photos and no ba
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('lang','ar');await expect(page.locator('html')).toHaveAttribute('dir','rtl');
   expect(await page.locator('main>section').evaluateAll(sections=>sections.map(section=>section.id))).toEqual(['home','about','team','moments','registration','faq']);
-  await expect(page.locator('h1')).toHaveCount(1);await expect(page.locator('.trainer-card')).toHaveCount(5);
+  await expect(page.locator('h1')).toHaveCount(1);await expect(page.locator('.trainer-card')).toHaveCount(4);
   await expect(page.locator('.trainer-card').filter({hasText:'Rakan Alqhaiwi'}).locator('img')).toHaveAttribute('src','/assets/team/rakan-alqhaiwi.jpg');
   for(const image of await page.locator('.trainer-card img').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(node=>node.complete&&node.naturalWidth>0)).toBe(true);}
   const sizes=await page.locator('.trainer-card').evaluateAll(cards=>cards.map(card=>card.getBoundingClientRect().height));expect(Math.max(...sizes)-Math.min(...sizes)).toBeLessThan(1);

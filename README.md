@@ -2,7 +2,7 @@
 
 A responsive Arabic/English **single-page, static website** for iSolve, an iTeam club at Al-Zaytoonah University of Jordan.
 
-The page scrolls through Hero → About → Team → iSolve Moments → Registration → FAQ → Footer. Navigation uses section anchors. Arabic/RTL is the first-visit default; the selected language is remembered locally. All five supplied team members have equal cards, including Rakan's updated supplied portrait. The header, footer, favicons, and hero artwork use the logo without the old version label.
+The page scrolls through Hero → About → Team → iSolve Moments → Registration → FAQ → Footer. Navigation uses section anchors. Arabic/RTL is the first-visit default; the selected language is remembered locally. All four current team members have equal cards, including Rakan's updated supplied portrait. The header, footer, favicons, and hero artwork use the logo without the old version label.
 
 We gather every Thursday in the university labs to learn new techniques, think, and solve together. This information appears in About and the bilingual FAQ; no specific time or lab number is assumed.
 
@@ -36,7 +36,7 @@ Run `npm run build` before the browser checks. Playwright uses the installed Goo
 
 ## Update content
 
-- `src/data/siteContent.js`: registration URL, the five team members, bilingual FAQ answers, and confirmed social links. Unknown contacts are omitted.
+- `src/data/siteContent.js`: registration URL, the four current team members, bilingual FAQ answers, and confirmed social links. Unknown contacts are omitted.
 - `src/i18n/en.js` and `ar.js`: the section copy. `src/i18n/index.js` contains navigation/footer labels; `src/gallery/translations.js` contains gallery labels.
 - `scripts/gallery-catalog.mjs`: the explicitly selected gallery photos and bilingual captions/alt descriptions. Follow [gallery preparation](docs/gallery-setup.md) after changing it.
 - `src/data/hero.js`: responsive sources for the supplied hero artwork. See [hero and logo notes](docs/hero-image.md).
