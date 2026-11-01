@@ -1,60 +1,40 @@
 # iSolve Coding Club
 
-A responsive Arabic/English **single-page, static website** for iSolve, an iTeam club at Al-Zaytoonah University of Jordan.
+A responsive, bilingual website for **iSolve Coding Club**, an iTeam initiative at Al-Zaytoonah University of Jordan. The club brings students together every Thursday to learn programming techniques, practise problem-solving, and grow through teamwork.
 
-The page scrolls through Hero → About → Team → iSolve Moments → Registration → FAQ → Footer. Navigation uses section anchors. Arabic/RTL is the first-visit default; the selected language is remembered locally. All four current team members have equal cards, including Rakan's updated supplied portrait. The header, footer, favicons, and hero artwork use the logo without the old version label.
+**[Explore the live website → isolve.live](https://isolve.live/)**
 
-We gather every Thursday in the university labs to learn new techniques, think, and solve together. This information appears in About and the bilingual FAQ; no specific time or lab number is assumed.
+## Features
 
-Registration buttons link directly to the supplied Google Form in a new tab. The sticky header keeps registration visible on desktop and phones. iSolve Moments features two real session videos, the iTeam motto, and 24 supplied photos with optimized thumbnails, category filters, six-photo pagination, and an accessible full-image viewer. The four newest session photos appear first. ZCC means **Zaytoonah Coding Contest**; winner captions say “Celebrating the winners.”
+- Arabic and English support, including right-to-left layouts.
+- Single-page navigation through the club overview, team, moments, registration, and FAQs.
+- Photo gallery with category filters and a full-screen viewer, plus session videos that load on demand.
+- Direct registration through Google Forms and a responsive layout for desktop and mobile.
 
-“Once you're iTeam, You're always iTeam” appears as the club motto in both language layouts. Videos have poster previews and native playback controls. Their MP4s load only after pressing play; starting another clip or scrolling a playing clip out of view pauses it.
+## Technologies
 
-Registration buttons appear in the header, hero, gallery heading, registration section, FAQ, and footer. About and Team have no registration buttons.
+| Area | Technologies |
+| --- | --- |
+| Frontend | React 19, JavaScript, HTML, CSS |
+| Development tooling | Vite, Node.js, npm |
+| Localization | i18next, react-i18next |
+| Icons | Lucide React |
+| Media optimization | Sharp, FFmpeg |
+| Code quality and testing | ESLint, Node.js Test Runner, Playwright |
 
 ## Run locally
 
-Use Node.js 24.22.1 (declared in `.node-version`) and npm. Run these commands from this repository root:
+Use the Node.js version specified in [`.node-version`](.node-version), then run:
 
 ```sh
 npm ci --include=dev
 npm run dev
 ```
 
-Open the Local URL printed by Vite. No environment variables, administrator accounts, backend, database, or image storage service are needed. The former administration interface, Supabase integration, SQL migrations, upload/import operations, demo mode, and unused routing dependencies have been removed. Existing `/about`, `/team`, and `/join` bookmarks lead to the matching section on `/`.
+Build for production with `npm run build`. The website is fully static and requires no backend, database, or environment variables.
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Local Vite development server |
-| `npm run build` | Build the static site into `dist/` |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Check JavaScript and JSX |
-| `npm test` | Verify bilingual content, supplied links, photos, and gallery data |
-| `npm run test:e2e` | Check the built site in Chrome on desktop and mobile |
-| `npm run gallery:prepare -- "PHOTO_DIRECTORY"` | Prepare optimized static gallery assets |
-| `npm run videos:prepare -- "VIDEO_DIRECTORY"` | Prepare session clips and posters with local FFmpeg/FFprobe |
-| `npm run assets:check` | Detect missing or unused public files |
+## Deployment
 
-Run `npm run build` before the browser checks. Playwright uses the installed Google Chrome browser and serves `dist` on port 4173.
+Hosted on **Render**, with the custom domain **isolve.live** registered through **Hostinger** and connected to Render using DNS.
 
-## Update content
-
-- `src/data/siteContent.js`: registration URL, the four current team members, bilingual FAQ answers, and confirmed social links. Unknown contacts are omitted.
-- `src/i18n/en.js` and `ar.js`: the section copy. `src/i18n/index.js` contains navigation/footer labels; `src/gallery/translations.js` contains gallery labels.
-- `scripts/gallery-catalog.mjs`: the explicitly selected gallery photos and bilingual captions/alt descriptions. Follow [gallery preparation](docs/gallery-setup.md) after changing it.
-- `src/gallery/SessionHighlights.jsx` and `src/data/sessionVideos.js`: the motto and featured session clips. The data file is generated by `scripts/prepare-session-videos.mjs`; see [media preparation](docs/gallery-setup.md).
-- `src/data/hero.js`: responsive sources for the supplied hero artwork. See [hero and logo notes](docs/hero-image.md).
-
-After editing, build and redeploy. All content is maintained in source files; visitors cannot upload or change it. The only browser storage is the visitor's language preference. The Google Form handles registration independently.
-
-## Deploy on Render
-
-Follow the [step-by-step Render guide](docs/render-deployment.md). Use a **Static Site**, branch `main`, a blank Root Directory, build command `npm ci --include=dev && npm run build`, and publish directory `dist`. No environment variables are required. The root `render.yaml` supports optional Blueprint deployment and declares the SPA rewrite for old bookmarks.
-
-The repository is directly in the outer `iSolve` folder, with a single Git repository. Push the source changes to GitHub to deploy through the linked Render service.
-
-Unused poster/palette assets, superseded hero images, the old Rakan portrait, unused favicon size, legacy local helper scripts, and unused hero styles were removed. Preparation scripts, source manifests, tests, and hosting configuration remain in use.
-
-## Verification
-
-See [verification notes](docs/verification.md) and [measured media sizes](docs/gallery-assets.md). Unit checks cover all 24 unique photos and their actual WebP/JPEG dimensions, MP4 integrity and fast-start layout, category/page splits, supplied names and links, bilingual fallback, and invalid gallery requests. Browser checks cover real video playback, deferred loading, pause/retry behavior, the motto, section order, anchor scrolling, persistent registration access, Arabic/English, equal team cards, gallery controls, and narrow phone layouts.
+> Once you're iTeam, You're always iTeam
