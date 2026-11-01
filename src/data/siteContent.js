@@ -24,6 +24,18 @@ export const members = [
     "name_en": "Rakan Alqhaiwi",
     "name_ar": "Rakan Alqhaiwi",
     "photo_url": "/assets/team/rakan-alqhaiwi.jpg"
+  },
+  {
+    "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce06",
+    "name_en": "Leen Zirieni",
+    "name_ar": "Leen Zirieni",
+    "photo_url": "/assets/team/leen-zirieni.png"
+  },
+  {
+    "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce07",
+    "name_en": "Rayan Odah",
+    "name_ar": "Rayan Odah",
+    "photo_url": "/assets/team/rayan-odah.jpeg"
   }
 ];
 export const faqs = [
