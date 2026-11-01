@@ -4,6 +4,7 @@ import { ChevronLeft,ChevronRight,X,Expand,RefreshCw,ImageOff } from 'lucide-rea
 import { galleryCategories,loadGallery,galleryLightbox } from '../lib/gallery.js';
 import { localized } from '../lib/utils.js';
 import RegistrationButton from '../components/RegistrationButton.jsx';
+import SessionHighlights from './SessionHighlights.jsx';
 import './gallery.css';
 
 export function GalleryPicture({photo,onOpen}) {
@@ -90,6 +91,8 @@ export default function Gallery(){
     catch{if(id===request.current)setState(previous=>({...previous,loading:false,error:true}));}finally{loadingPage.current=false;}return 0;
   }
   return <section id="moments" tabIndex={-1} ref={section} className="section gallery-section" aria-labelledby="gallery-title"><div className="container"><div className="section-heading"><div><p className="eyebrow">{t('eyebrow')}</p><h2 id="gallery-title">{t('title')}</h2><p>{t('intro')}</p></div><RegistrationButton className="small"/></div>
+    <SessionHighlights/>
+    <h3 className="gallery-collection-title">{t('collectionTitle')}</h3>
     <div className="gallery-filters" role="group" aria-label={t('filters')}>{galleryCategories.map(value=><button key={value} aria-pressed={category===value} onClick={()=>filter(value)}>{t(value)}</button>)}</div>
     <div className="gallery-grid" aria-busy={state.loading}>{state.items.map((photo,index)=><GalleryPicture key={photo.id} photo={photo} onOpen={()=>setSelected(index)}/>)}{state.loading&&!state.items.length&&[0,1,2,3,4,5].map(value=><div className="gallery-skeleton" key={value} aria-hidden="true"><div/><span/><span/></div>)}</div>
     {state.error&&<div className="gallery-status" role="alert"><p>{t('loadError')}</p><button className="button secondary" onClick={()=>state.items.length?more():setRevision(value=>value+1)}><RefreshCw size={16}/>{t('retry')}</button></div>}

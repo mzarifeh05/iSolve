@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 
-test('gallery metadata waits for viewport, paginates 6/6/6/2, and filters server pages',async({page},info)=>{
+test('gallery metadata waits for viewport, paginates 6/6/6/6, and filters category pages',async({page},info)=>{
   const requests=[];page.on('request',request=>requests.push(request.url()));
   await page.goto('/');await page.evaluate(()=>document.fonts.ready);
   expect(requests.some(url=>url.includes('/gallery-data/'))).toBe(false);
@@ -10,13 +10,14 @@ test('gallery metadata waits for viewport, paginates 6/6/6/2, and filters server
   expect(requests.some(url=>/-full\.(webp|jpg)/.test(url))).toBe(false);
   await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(12);
   await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(18);
-  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(20);
+  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(24);
   await expect(page.locator('.gallery-more')).toHaveCount(0);
-  await page.getByRole('button',{name:'التدريب',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(4);
+  await page.getByRole('button',{name:'التدريب',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(6);
+  await page.locator('.gallery-more button').click();await expect(page.locator('.gallery-card')).toHaveCount(7);
   expect(requests.some(url=>url.endsWith('/training-0.json'))).toBe(true);
   await page.getByRole('button',{name:'مسابقة ZCC',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(6);
   await expect(page.locator('.gallery-more')).toBeVisible();
-  await page.getByRole('button',{name:'لحظات النادي',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(4);
+  await page.getByRole('button',{name:'لحظات النادي',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(5);
   expect(await page.locator('.gallery-card img').evaluateAll(images=>images.every(image=>getComputedStyle(image).objectFit==='contain'))).toBe(true);
   const columns=await page.locator('.gallery-grid').evaluate(element=>getComputedStyle(element).gridTemplateColumns.split(' ').length);
   expect(columns).toBe(info.project.name==='mobile'?1:3);

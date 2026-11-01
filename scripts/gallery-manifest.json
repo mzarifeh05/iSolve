@@ -2,6 +2,218 @@
   "version": 1,
   "records": [
     {
+      "slug": "finding-the-solution",
+      "category": "training",
+      "caption_en": "That moment when the next idea starts to click",
+      "caption_ar": "تركيز يقودنا إلى فكرة الحل",
+      "alt_en": "A student concentrating on a laptop with other students working nearby",
+      "alt_ar": "طالب يركّز أمام حاسوبه المحمول، وطلاب آخرون يعملون بالقرب منه",
+      "fit": "contain",
+      "focal_x": 50,
+      "focal_y": 50,
+      "id": "9cd7492c-d476-51a0-a74a-4e1e81878d2d",
+      "content_hash": "9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5",
+      "source_filename": "focusing to find the solution.JPG",
+      "source_width": 1080,
+      "source_height": 1620,
+      "sort_order": 0,
+      "variants": {
+        "thumbnails": [
+          {
+            "path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-320.webp",
+            "fallback_path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-320.jpg",
+            "width": 320,
+            "height": 480,
+            "bytes": 11584,
+            "fallback_bytes": 16289
+          },
+          {
+            "path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-640.webp",
+            "fallback_path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-640.jpg",
+            "width": 640,
+            "height": 960,
+            "bytes": 29534,
+            "fallback_bytes": 46084
+          },
+          {
+            "path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-960.webp",
+            "fallback_path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-960.jpg",
+            "width": 960,
+            "height": 1440,
+            "bytes": 53388,
+            "fallback_bytes": 87512
+          }
+        ],
+        "lightbox": {
+          "path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-full.webp",
+          "fallback_path": "/assets/gallery/9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5/finding-the-solution-full.jpg",
+          "width": 1080,
+          "height": 1620,
+          "bytes": 65306,
+          "fallback_bytes": 107028
+        }
+      }
+    },
+    {
+      "slug": "trainees-and-trainers",
+      "category": "moments",
+      "caption_en": "Different starting points. One iTeam.",
+      "caption_ar": "بدايات مختلفة، وفريق واحد يجمعنا",
+      "alt_en": "Trainees and trainers posing together in a university hall",
+      "alt_ar": "المتدرّبون والمدرّبون يلتقطون صورة جماعية في بهو الجامعة",
+      "fit": "contain",
+      "focal_x": 50,
+      "focal_y": 50,
+      "id": "be2bfaf8-bc93-54f1-a8ab-8fa3acc403b2",
+      "content_hash": "be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e",
+      "source_filename": "gropu picture for trainees and trainers.JPG",
+      "source_width": 4032,
+      "source_height": 3024,
+      "sort_order": 1,
+      "variants": {
+        "thumbnails": [
+          {
+            "path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-320.webp",
+            "fallback_path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-320.jpg",
+            "width": 320,
+            "height": 240,
+            "bytes": 15518,
+            "fallback_bytes": 16785
+          },
+          {
+            "path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-640.webp",
+            "fallback_path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-640.jpg",
+            "width": 640,
+            "height": 480,
+            "bytes": 47764,
+            "fallback_bytes": 53217
+          },
+          {
+            "path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-960.webp",
+            "fallback_path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-960.jpg",
+            "width": 960,
+            "height": 720,
+            "bytes": 93730,
+            "fallback_bytes": 106667
+          }
+        ],
+        "lightbox": {
+          "path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-full.webp",
+          "fallback_path": "/assets/gallery/be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e/trainees-and-trainers-full.jpg",
+          "width": 1920,
+          "height": 1440,
+          "bytes": 279010,
+          "fallback_bytes": 342078
+        }
+      }
+    },
+    {
+      "slug": "guided-practice",
+      "category": "training",
+      "caption_en": "Try it yourself, with a teammate to guide you",
+      "caption_ar": "نجرّب بأنفسنا، ومعنا من يرشدنا",
+      "alt_en": "Students working at lab computers while an organizer offers guidance",
+      "alt_ar": "طلاب يتدرّبون أمام حواسيب المختبر، وإحدى المنظّمات ترشدهم",
+      "fit": "contain",
+      "focal_x": 50,
+      "focal_y": 50,
+      "id": "c14ba979-5378-51bd-a1b2-b67cb8e5839c",
+      "content_hash": "c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f",
+      "source_filename": "trainees during practical application with orgnizers guide.JPG",
+      "source_width": 1620,
+      "source_height": 1080,
+      "sort_order": 2,
+      "variants": {
+        "thumbnails": [
+          {
+            "path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-320.webp",
+            "fallback_path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-320.jpg",
+            "width": 320,
+            "height": 213,
+            "bytes": 10334,
+            "fallback_bytes": 12492
+          },
+          {
+            "path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-640.webp",
+            "fallback_path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-640.jpg",
+            "width": 640,
+            "height": 427,
+            "bytes": 27498,
+            "fallback_bytes": 35826
+          },
+          {
+            "path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-960.webp",
+            "fallback_path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-960.jpg",
+            "width": 960,
+            "height": 640,
+            "bytes": 45208,
+            "fallback_bytes": 63463
+          }
+        ],
+        "lightbox": {
+          "path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-full.webp",
+          "fallback_path": "/assets/gallery/c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f/guided-practice-full.jpg",
+          "width": 1620,
+          "height": 1080,
+          "bytes": 84846,
+          "fallback_bytes": 134055
+        }
+      }
+    },
+    {
+      "slug": "ideas-in-the-room",
+      "category": "training",
+      "caption_en": "Questions, ideas, and learning together",
+      "caption_ar": "أسئلة وأفكار وتعلّم معًا",
+      "alt_en": "Students participating in a session from rows of red lecture-room seats",
+      "alt_ar": "طلاب يشاركون في جلسة تعلّم على صفوف من المقاعد الحمراء",
+      "fit": "contain",
+      "focal_x": 50,
+      "focal_y": 50,
+      "id": "e3e458b2-c5c0-5ddb-a76b-7780566e0655",
+      "content_hash": "e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c",
+      "source_filename": "trainees.JPG",
+      "source_width": 1620,
+      "source_height": 1080,
+      "sort_order": 3,
+      "variants": {
+        "thumbnails": [
+          {
+            "path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-320.webp",
+            "fallback_path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-320.jpg",
+            "width": 320,
+            "height": 213,
+            "bytes": 13356,
+            "fallback_bytes": 15533
+          },
+          {
+            "path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-640.webp",
+            "fallback_path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-640.jpg",
+            "width": 640,
+            "height": 427,
+            "bytes": 34738,
+            "fallback_bytes": 43777
+          },
+          {
+            "path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-960.webp",
+            "fallback_path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-960.jpg",
+            "width": 960,
+            "height": 640,
+            "bytes": 56798,
+            "fallback_bytes": 77466
+          }
+        ],
+        "lightbox": {
+          "path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-full.webp",
+          "fallback_path": "/assets/gallery/e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c/ideas-in-the-room-full.jpg",
+          "width": 1620,
+          "height": 1080,
+          "bytes": 111260,
+          "fallback_bytes": 165163
+        }
+      }
+    },
+    {
       "slug": "teamwork-in-the-lab",
       "category": "training",
       "caption_en": "Working together to solve programming problems",
@@ -16,7 +228,7 @@
       "source_filename": "teams solving together.JPG",
       "source_width": 1620,
       "source_height": 1080,
-      "sort_order": 0,
+      "sort_order": 4,
       "variants": {
         "thumbnails": [
           {
@@ -69,7 +281,7 @@
       "source_filename": "session group pic.JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 1,
+      "sort_order": 5,
       "variants": {
         "thumbnails": [
           {
@@ -122,7 +334,7 @@
       "source_filename": "during session.jpeg",
       "source_width": 1080,
       "source_height": 810,
-      "sort_order": 2,
+      "sort_order": 6,
       "variants": {
         "thumbnails": [
           {
@@ -175,7 +387,7 @@
       "source_filename": "group picture from zcc.JPG",
       "source_width": 5760,
       "source_height": 3840,
-      "sort_order": 3,
+      "sort_order": 7,
       "variants": {
         "thumbnails": [
           {
@@ -228,7 +440,7 @@
       "source_filename": "teams solving in zcc.JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 4,
+      "sort_order": 8,
       "variants": {
         "thumbnails": [
           {
@@ -281,7 +493,7 @@
       "source_filename": "winners in zcc 1st.JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 5,
+      "sort_order": 9,
       "variants": {
         "thumbnails": [
           {
@@ -334,7 +546,7 @@
       "source_filename": "winners in zcc 2nd.JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 6,
+      "sort_order": 10,
       "variants": {
         "thumbnails": [
           {
@@ -387,7 +599,7 @@
       "source_filename": "winners in zcc 3rd.JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 7,
+      "sort_order": 11,
       "variants": {
         "thumbnails": [
           {
@@ -440,7 +652,7 @@
       "source_filename": "during session.JPG",
       "source_width": 1620,
       "source_height": 1080,
-      "sort_order": 8,
+      "sort_order": 12,
       "variants": {
         "thumbnails": [
           {
@@ -493,7 +705,7 @@
       "source_filename": "orgnizer of iSolve checking participants in zcc.JPG",
       "source_width": 5184,
       "source_height": 3456,
-      "sort_order": 9,
+      "sort_order": 13,
       "variants": {
         "thumbnails": [
           {
@@ -546,7 +758,7 @@
       "source_filename": "happy paritcipant in zcc.JPG",
       "source_width": 4000,
       "source_height": 6000,
-      "sort_order": 10,
+      "sort_order": 14,
       "variants": {
         "thumbnails": [
           {
@@ -599,7 +811,7 @@
       "source_filename": "participatns in zcc.JPG",
       "source_width": 5184,
       "source_height": 3456,
-      "sort_order": 11,
+      "sort_order": 15,
       "variants": {
         "thumbnails": [
           {
@@ -652,7 +864,7 @@
       "source_filename": "most solved in past version.JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 12,
+      "sort_order": 16,
       "variants": {
         "thumbnails": [
           {
@@ -705,7 +917,7 @@
       "source_filename": "most solved in past version (2).JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 13,
+      "sort_order": 17,
       "variants": {
         "thumbnails": [
           {
@@ -758,7 +970,7 @@
       "source_filename": "most solved in past version (3).JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 14,
+      "sort_order": 18,
       "variants": {
         "thumbnails": [
           {
@@ -811,7 +1023,7 @@
       "source_filename": "club sticker image.JPG",
       "source_width": 1620,
       "source_height": 1080,
-      "sort_order": 15,
+      "sort_order": 19,
       "variants": {
         "thumbnails": [
           {
@@ -864,7 +1076,7 @@
       "source_filename": "participants pictures before contest starts.JPG",
       "source_width": 5184,
       "source_height": 3456,
-      "sort_order": 16,
+      "sort_order": 20,
       "variants": {
         "thumbnails": [
           {
@@ -917,7 +1129,7 @@
       "source_filename": "participants solving in zcc (2).JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 17,
+      "sort_order": 21,
       "variants": {
         "thumbnails": [
           {
@@ -970,7 +1182,7 @@
       "source_filename": "participants solving in zcc.JPG",
       "source_width": 4000,
       "source_height": 6000,
-      "sort_order": 18,
+      "sort_order": 22,
       "variants": {
         "thumbnails": [
           {
@@ -1023,7 +1235,7 @@
       "source_filename": "participatns thinking in zcc.JPG",
       "source_width": 6000,
       "source_height": 4000,
-      "sort_order": 19,
+      "sort_order": 23,
       "variants": {
         "thumbnails": [
           {
@@ -1063,6 +1275,30 @@
     }
   ],
   "mapping": [
+    {
+      "source": "focusing to find the solution.JPG",
+      "id": "9cd7492c-d476-51a0-a74a-4e1e81878d2d",
+      "content_hash": "9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5",
+      "slug": "finding-the-solution"
+    },
+    {
+      "source": "gropu picture for trainees and trainers.JPG",
+      "id": "be2bfaf8-bc93-54f1-a8ab-8fa3acc403b2",
+      "content_hash": "be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e",
+      "slug": "trainees-and-trainers"
+    },
+    {
+      "source": "trainees during practical application with orgnizers guide.JPG",
+      "id": "c14ba979-5378-51bd-a1b2-b67cb8e5839c",
+      "content_hash": "c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f",
+      "slug": "guided-practice"
+    },
+    {
+      "source": "trainees.JPG",
+      "id": "e3e458b2-c5c0-5ddb-a76b-7780566e0655",
+      "content_hash": "e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c",
+      "slug": "ideas-in-the-room"
+    },
     {
       "source": "teams solving together.JPG",
       "id": "de91f7d2-fbb8-5c0d-af49-a000f54e694e",

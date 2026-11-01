@@ -6,8 +6,15 @@ import { fileURLToPath } from 'node:url';
 import { catalog } from './gallery-catalog.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const sourceDir = process.argv[2];
-if (!sourceDir) throw new Error('Usage: npm run gallery:prepare -- "ABSOLUTE_PHOTO_DIRECTORY"');
+const sourceDirs = process.argv.slice(2);
+if (!sourceDirs.length) throw new Error('Usage: npm run gallery:prepare -- "PHOTO_DIRECTORY" ["ADDITIONAL_PHOTO_DIRECTORY"]');
+async function sourceFile(filename) {
+  for (const directory of sourceDirs) {
+    const candidate=path.join(directory,filename);
+    try { await access(candidate);return candidate; } catch(error) { if(error.code!=='ENOENT')throw error; }
+  }
+  throw new Error(`Source photo not found in the supplied directories: ${filename}`);
+}
 const output = path.join(root, 'public/assets/gallery');
 const metadataDir = path.join(root, 'public/gallery-data/v1');
 await mkdir(output, { recursive: true });
@@ -19,7 +26,7 @@ let previousRecords=[];
 try { previousRecords=JSON.parse(await readFile(path.join(root,'scripts/gallery-manifest.json'),'utf8')).records; }
 catch(error) { if(error.code!=='ENOENT')throw error; }
 for (const [sort_order, item] of catalog.entries()) {
-  const input = await readFile(path.join(sourceDir, item.source));
+  const input = await readFile(await sourceFile(item.source));
   const hash = createHash('sha256').update(input).digest('hex');
   if (seen.has(hash)) { mapping.push({ source: item.source, duplicate_of: seen.get(hash) }); continue; }
   seen.set(hash, item.source);
@@ -66,7 +73,7 @@ for (const [sort_order, item] of catalog.entries()) {
   records.push(record); mapping.push({ source, id: uuid, content_hash: hash, slug: item.slug });
 }
 // Detect duplicate attachments by file contents, including the optional sticker copy.
-for (const filename of (await readdir(sourceDir)).filter(name => /^club sticker image(?:\(1\))?\.jpg$/i.test(name))) {
+for (const sourceDir of sourceDirs) for (const filename of (await readdir(sourceDir)).filter(name => /^club sticker image(?:\(1\))?\.jpg$/i.test(name))) {
   if (mapping.some(row => row.source === filename)) continue;
   const hash = createHash('sha256').update(await readFile(path.join(sourceDir, filename))).digest('hex');
   if (seen.has(hash)) mapping.push({ source: filename, duplicate_of: seen.get(hash), content_hash: hash });

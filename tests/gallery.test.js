@@ -6,10 +6,11 @@ import {fileURLToPath} from 'node:url';
 import {loadGallery} from '../src/lib/gallery.js';
 const manifest=JSON.parse(await readFile(new URL('../scripts/gallery-manifest.json',import.meta.url),'utf8'));
 
-test('the gallery keeps its original collection and adds all four distinct supplied photos',()=>{
+test('the gallery leads with four new session photos and retains the full original collection',()=>{
   const rows=manifest.records;
-  assert.equal(rows.length,20);assert.equal(new Set(rows.map(row=>row.content_hash)).size,20);
-  assert.deepEqual(rows.slice(0,3).map(row=>row.source_filename),['teams solving together.JPG','session group pic.JPG','during session.jpeg']);
+  assert.equal(rows.length,24);assert.equal(new Set(rows.map(row=>row.content_hash)).size,24);
+  assert.deepEqual(rows.slice(0,4).map(row=>row.source_filename),['focusing to find the solution.JPG','gropu picture for trainees and trainers.JPG','trainees during practical application with orgnizers guide.JPG','trainees.JPG']);
+  assert.deepEqual(rows.slice(4,7).map(row=>row.source_filename),['teams solving together.JPG','session group pic.JPG','during session.jpeg']);
   assert.deepEqual(rows.slice(-4).map(row=>row.source_filename),['participants pictures before contest starts.JPG','participants solving in zcc (2).JPG','participants solving in zcc.JPG','participatns thinking in zcc.JPG']);
   assert.ok(rows.slice(-4).every(row=>row.category==='zcc'));
   assert.equal(rows.filter(row=>row.source_filename.startsWith('club sticker')).length,1);
@@ -28,14 +29,14 @@ test('every actual WebP and JPEG variant preserves orientation and respects its 
     assert.ok(Math.max(row.variants.lightbox.width,row.variants.lightbox.height)<=1920);
   }
 });
-test('metadata pagination contains all 20 photos exactly once and category pages remain separate',async()=>{
+test('metadata pagination contains all 24 photos exactly once and category pages remain separate',async()=>{
   const ids=[];
-  for(const [offset,count] of [[0,6],[6,6],[12,6],[18,2]]){
+  for(const [offset,count] of [[0,6],[6,6],[12,6],[18,6]]){
     const data=JSON.parse(await readFile(new URL(`../public/gallery-data/v1/all-${offset}.json`,import.meta.url),'utf8'));
     assert.equal(data.items.length,count);assert.equal(data.hasMore,offset!==18);assert.equal(data.nextOffset,offset+count);ids.push(...data.items.map(row=>row.id));
   }
-  assert.equal(new Set(ids).size,20);
-  for(const [category,total] of [['training',4],['zcc',12],['moments',4]]){
+  assert.equal(new Set(ids).size,24);
+  for(const [category,total] of [['training',7],['zcc',12],['moments',5]]){
     let count=0;
     for(let offset=0;offset<total;offset+=6){
       const data=JSON.parse(await readFile(new URL(`../public/gallery-data/v1/${category}-${offset}.json`,import.meta.url),'utf8'));

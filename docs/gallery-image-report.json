@@ -1,5 +1,5 @@
 {
-  "unique_photos": 20,
+  "unique_photos": 24,
   "thumbnail_widths": [
     320,
     640,
@@ -8,9 +8,33 @@
   "thumbnail_webp_bytes": {
     "min": 4964,
     "max": 138390,
-    "total": 2036752
+    "total": 2476202
   },
   "lightbox_webp_bytes": [
+    {
+      "slug": "finding-the-solution",
+      "width": 1080,
+      "height": 1620,
+      "bytes": 65306
+    },
+    {
+      "slug": "trainees-and-trainers",
+      "width": 1920,
+      "height": 1440,
+      "bytes": 279010
+    },
+    {
+      "slug": "guided-practice",
+      "width": 1620,
+      "height": 1080,
+      "bytes": 84846
+    },
+    {
+      "slug": "ideas-in-the-room",
+      "width": 1620,
+      "height": 1080,
+      "bytes": 111260
+    },
     {
       "slug": "teamwork-in-the-lab",
       "width": 1620,
@@ -133,6 +157,30 @@
     }
   ],
   "source_mapping": [
+    {
+      "source": "focusing to find the solution.JPG",
+      "id": "9cd7492c-d476-51a0-a74a-4e1e81878d2d",
+      "content_hash": "9cd7492cd47611a0a74a4e1e81878d2d1615ae40203c45886383660f1af963f5",
+      "slug": "finding-the-solution"
+    },
+    {
+      "source": "gropu picture for trainees and trainers.JPG",
+      "id": "be2bfaf8-bc93-54f1-a8ab-8fa3acc403b2",
+      "content_hash": "be2bfaf8bc9364f188ab8fa3acc403b2c5d81525e2d75092692f93499161f36e",
+      "slug": "trainees-and-trainers"
+    },
+    {
+      "source": "trainees during practical application with orgnizers guide.JPG",
+      "id": "c14ba979-5378-51bd-a1b2-b67cb8e5839c",
+      "content_hash": "c14ba979537821bd11b2b67cb8e5839c35064fee3d5526c970b4a7ac3206bb9f",
+      "slug": "guided-practice"
+    },
+    {
+      "source": "trainees.JPG",
+      "id": "e3e458b2-c5c0-5ddb-a76b-7780566e0655",
+      "content_hash": "e3e458b2c5c04ddb676b7780566e0655c85ddd3b12548c549eb5bbcb72eb270c",
+      "slug": "ideas-in-the-room"
+    },
     {
       "source": "teams solving together.JPG",
       "id": "de91f7d2-fbb8-5c0d-af49-a000f54e694e",

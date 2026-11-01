@@ -47,6 +47,6 @@ The root `render.yaml` declares the Static Site, build command, publish director
 
 ## Check after deployment
 
-Open a fresh browser window and confirm Arabic/RTL, then switch to English and refresh. Scroll through the sections in order, check the mobile menu, and confirm the header registration button remains visible. All registration buttons should open the same Google Form. Check the team portraits, gallery filters, all 20 photos through Show more, the full-image viewer, and the FAQ accordion. No sign-in or administration interface should appear.
+Open a fresh browser window and confirm Arabic/RTL, then switch to English and refresh. Scroll through the sections in order, check the mobile menu, and confirm the header registration button remains visible. All registration buttons should open the same Google Form. Check the team portraits, iTeam motto, both session clips by pressing play, gallery filters, all 24 photos through Show more, the full-image viewer, and the FAQ accordion. No sign-in or administration interface should appear. The prepared videos ship with the static files; no video service or extra environment variables are needed.
 
 Future content changes happen in the repository and require another build/deploy. Refer to the main README for the content files.
