@@ -7,7 +7,7 @@ test('tablet frames, portrait lightbox and gallery layout stay stable',async({pa
     new PerformanceObserver(list=>{for(const entry of list.getEntries())if(!entry.hadRecentInput&&entry.sources?.some(source=>source.node?.closest?.('.gallery-section')))window.galleryShift+=entry.value;}).observe({type:'layout-shift',buffered:true});
   });
   await page.goto('/');await page.locator('.gallery-section').scrollIntoViewIfNeeded();await expect(page.locator('.gallery-card')).toHaveCount(6);
-  expect(await page.locator('.gallery-grid').evaluate(element=>getComputedStyle(element).gridTemplateColumns.split(' ').length)).toBe(2);
+  expect(await page.locator('.gallery-card').evaluateAll(cards=>cards.filter(card=>Math.abs(card.getBoundingClientRect().top-cards[0].getBoundingClientRect().top)<1).length)).toBe(2);
   for(const frame of await page.locator('.gallery-frame').all()){
     const box=await frame.boundingBox();expect(box.width/box.height).toBeCloseTo(1.5,1);
   }

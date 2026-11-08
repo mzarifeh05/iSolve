@@ -19,7 +19,7 @@ test('gallery metadata waits for viewport, paginates 6/6/6/6, and filters catego
   await expect(page.locator('.gallery-more')).toBeVisible();
   await page.getByRole('button',{name:'لحظات النادي',exact:true}).click();await expect(page.locator('.gallery-card')).toHaveCount(5);
   expect(await page.locator('.gallery-card img').evaluateAll(images=>images.every(image=>getComputedStyle(image).objectFit==='contain'))).toBe(true);
-  const columns=await page.locator('.gallery-grid').evaluate(element=>getComputedStyle(element).gridTemplateColumns.split(' ').length);
+  const columns=await page.locator('.gallery-card').evaluateAll(cards=>cards.filter(card=>Math.abs(card.getBoundingClientRect().top-cards[0].getBoundingClientRect().top)<1).length);
   expect(columns).toBe(info.project.name==='mobile'?1:3);
   await page.getByRole('button',{name:'التبديل إلى الإنجليزية'}).click();
   await expect(page.getByRole('button',{name:'Club Moments',exact:true})).toHaveAttribute('aria-pressed','true');

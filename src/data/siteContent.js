@@ -2,12 +2,6 @@
 export const registrationUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfmiIE9gbBjrtwJJZUyu-Xt3sixIKz4x4dWZQuTbxZttrMG7A/viewform?usp=sharing&ouid=101765325223954785073";
 export const members = [
   {
-    "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce01",
-    "name_en": "Mohammed Zarifeh",
-    "name_ar": "Mohammed Zarifeh",
-    "photo_url": "/assets/team/mohammed-zarifeh.jpg"
-  },
-  {
     "id": "b8fa15c8-6a34-40fb-a019-2246b2cfce02",
     "name_en": "Leena Aburahmeh",
     "name_ar": "Leena Aburahmeh",

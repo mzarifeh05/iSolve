@@ -11,11 +11,11 @@ test('bilingual text falls back when a translation is missing',()=>{
   assert.equal(localized({name_en:'Hello',name_ar:' '},'name','ar'),'Hello');
   assert.equal(localized({answer_ar:'إجابة'},'answer','en'),'إجابة');
   assert.equal(localized(null,'name'),'');
-  assert.equal(initials('Mohammed Zarifeh'),'MZ');
+  assert.equal(initials('Leena Aburahmeh'),'LA');
 });
-test('all six current members retain their names and available portraits',()=>{
-  assert.deepEqual(members.map(member=>member.name_en),['Mohammed Zarifeh','Leena Aburahmeh','Hala Darwish','Rakan Alqhaiwi','Leen Zirieni','Rayan Odah']);
-  assert.equal(new Set(members.map(member=>member.photo_url)).size,6);
+test('all five current members retain their names and available portraits',()=>{
+  assert.deepEqual(members.map(member=>member.name_en),['Leena Aburahmeh','Hala Darwish','Rakan Alqhaiwi','Leen Zirieni','Rayan Odah']);
+  assert.equal(new Set(members.map(member=>member.photo_url)).size,5);
   for(const member of members)assert.ok(existsSync(new URL(`../public${member.photo_url}`,import.meta.url)));
   assert.ok(existsSync(new URL('../public/assets/isolve-logo-transparent.png',import.meta.url)));
 });
